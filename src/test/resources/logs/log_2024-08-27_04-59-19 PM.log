@@ -1,0 +1,14 @@
+[DEBUG] 27-08-2024 16:59:19 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LoginSuite.xml"
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.Setup()[pri:0, instance:null] -1741851915
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.tearout()[pri:0, instance:null] 919896390
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 27-08-2024 16:59:25 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 27-08-2024 16:59:25 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LoginSuite.xml
+
