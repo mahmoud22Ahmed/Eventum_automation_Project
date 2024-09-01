@@ -1,0 +1,46 @@
+[DEBUG] 01-09-2024 16:01:59 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\AddDashboard.xml"
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.Setup()[pri:0, instance:null] -187489918
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.tearout()[pri:0, instance:null] 1512755889
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:0, instance:Tests.AddDashboardPageTC@19e4fcac] -175909776
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC4_CheckValidRange()[pri:0, instance:Tests.AddDashboardPageTC@19e4fcac] -334034852
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC1_AddValidDashboard()[pri:0, instance:Tests.AddDashboardPageTC@19e4fcac] 1149930091
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC2_CheckSubmitEmptyForm()[pri:0, instance:Tests.AddDashboardPageTC@19e4fcac] 1488420378
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 16:02:00 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 01-09-2024 16:02:00 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\AddDashboard.xml
+
+[INFO] 01-09-2024 16:02:10 [TestNG-test-Add Dashboard page test on google Chrome-1] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 16:02:10 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 16:02:10 [TestNG-test-Add Dashboard page test on google Chrome-3] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 16:02:10 [TestNG-test-Add Dashboard page test on google Chrome-1] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-2] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-1] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-3] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-3] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-2] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 16:02:11 [TestNG-test-Add Dashboard page test on google Chrome-2] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 16:02:12 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - Test Dashboard name with 2 characters
+[INFO] 01-09-2024 16:02:13 [TestNG-test-Add Dashboard page test on google Chrome-2] [Utilities.LogsUtils] - error message: Name must be at least 1 characters and at most 50
+[INFO] 01-09-2024 16:02:14 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - the error message in Dashboard name isn't appeared
+[INFO] 01-09-2024 16:02:14 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - Test Dashboard name with 51 characters
+[INFO] 01-09-2024 16:02:14 [TestNG-test-Add Dashboard page test on google Chrome-3] [Utilities.LogsUtils] - 14/08/24 00:00 - 22/08/24 00:00
+[INFO] 01-09-2024 16:02:14 [TestNG-test-Add Dashboard page test on google Chrome-3] [Utilities.LogsUtils] - 14/08/24 00:00 - 22/08/24 00:00
+[INFO] 01-09-2024 16:02:15 [TestNG-test-Add Dashboard page test on google Chrome-1] [Utilities.LogsUtils] - Mahmoud 0ka
+[INFO] 01-09-2024 16:02:15 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - get again to Add page
+[INFO] 01-09-2024 16:02:15 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - Test Dashboard name with 51 characters
+[INFO] 01-09-2024 16:02:16 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - error message: Name must be at least 1 characters and at most 50
+[INFO] 01-09-2024 16:02:16 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - Test Dashboard dashboard with 1001 characters
+[INFO] 01-09-2024 16:02:20 [TestNG-test-Add Dashboard page test on google Chrome-4] [Utilities.LogsUtils] - error message: Description cannot exceed 1000 characters

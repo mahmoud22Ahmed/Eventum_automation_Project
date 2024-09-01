@@ -1,0 +1,25 @@
+[DEBUG] 28-08-2024 17:03:23 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.Setup()[pri:0, instance:null] -1741851915
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.tearout()[pri:0, instance:null] 919896390
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC1_CheckLogout()[pri:1, instance:Tests.LoginTC@7331196b] -742310674
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 17:03:23 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 28-08-2024 17:03:23 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 28-08-2024 17:03:41 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 28-08-2024 17:03:41 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 28-08-2024 17:03:41 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 28-08-2024 17:03:44 [main] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/dashboard?id=185&refreshRate=OFF&relativeDate=last7Days
+[INFO] 28-08-2024 17:03:44 [main] [Utilities.LogsUtils] - login Check:true
+[INFO] 28-08-2024 17:03:48 [main] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/

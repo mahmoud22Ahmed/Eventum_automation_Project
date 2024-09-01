@@ -1,0 +1,47 @@
+[DEBUG] 01-09-2024 17:00:20 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.Setup()[pri:0, instance:null] -187489918
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.tearout()[pri:0, instance:null] 1512755889
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:3, instance:Tests.AddDashboardPageTC@50d13246] 745540106
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC4_CheckValidRange()[pri:2, instance:Tests.AddDashboardPageTC@50d13246] 587415030
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC1_AddValidDashboard()[pri:1, instance:Tests.AddDashboardPageTC@50d13246] 2071379973
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC2_CheckSubmitEmptyForm()[pri:1, instance:Tests.AddDashboardPageTC@50d13246] -1885097036
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 17:00:21 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 01-09-2024 17:00:21 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 01-09-2024 17:00:26 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 17:00:27 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 17:00:27 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 17:00:29 [main] [Utilities.LogsUtils] - UCL
+[INFO] 01-09-2024 17:00:34 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 17:00:34 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 17:00:35 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 17:00:36 [main] [Utilities.LogsUtils] - error message: Name must be at least 1 characters and at most 50
+[INFO] 01-09-2024 17:00:41 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 17:00:41 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 17:00:41 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 17:00:43 [main] [Utilities.LogsUtils] - Test Dashboard name with 2 characters
+[INFO] 01-09-2024 17:00:48 [main] [Utilities.LogsUtils] - the error message in Dashboard name isn't appeared
+[INFO] 01-09-2024 17:00:48 [main] [Utilities.LogsUtils] - Test Dashboard name with 51 characters
+[INFO] 01-09-2024 17:00:49 [main] [Utilities.LogsUtils] - get again to Add page
+[INFO] 01-09-2024 17:00:50 [main] [Utilities.LogsUtils] - Test Dashboard name with 51 characters
+[INFO] 01-09-2024 17:00:50 [main] [Utilities.LogsUtils] - error message: Name must be at least 1 characters and at most 50
+[INFO] 01-09-2024 17:00:50 [main] [Utilities.LogsUtils] - Test Dashboard dashboard with 1001 characters
+[INFO] 01-09-2024 17:00:54 [main] [Utilities.LogsUtils] - error message: Description cannot exceed 1000 characters
+[INFO] 01-09-2024 17:01:00 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 17:01:00 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 17:01:00 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 17:01:02 [main] [Utilities.LogsUtils] - 01/09/24 00:00 - 01/01/25 00:00
+[INFO] 01-09-2024 17:01:02 [main] [Utilities.LogsUtils] - 01/09/24 00:00 - 01/01/25 00:00
+[INFO] 01-09-2024 17:01:02 [main] [Utilities.LogsUtils] - it is = true

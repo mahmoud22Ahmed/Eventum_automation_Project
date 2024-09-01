@@ -1,0 +1,22 @@
+[DEBUG] 01-09-2024 14:33:57 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.Setup()[pri:0, instance:null] -187489918
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.tearout()[pri:0, instance:null] 1512755889
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 14:33:57 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 14:33:58 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:0, instance:Tests.AddDashboardPageTC@466276d8] 570511004
+[TRACE] 01-09-2024 14:33:58 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 14:33:58 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 14:33:58 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 14:33:58 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 01-09-2024 14:33:58 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 01-09-2024 14:34:03 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 14:34:04 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 14:34:04 [main] [Utilities.LogsUtils] - button is clicked

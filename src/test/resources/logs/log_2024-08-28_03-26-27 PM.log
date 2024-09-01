@@ -1,0 +1,45 @@
+[DEBUG] 28-08-2024 15:26:27 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LoginSuite.xml"
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.Setup()[pri:0, instance:null] -1741851915
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.tearout()[pri:0, instance:null] 919896390
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC3_EmptyLogin()[pri:1, instance:Tests.LoginTC@49964d75] -1195671686
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC1_ValidLogin()[pri:1, instance:Tests.LoginTC@49964d75] 1122139189
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC2_InvalidLogin()[pri:1, instance:Tests.LoginTC@49964d75] 236473201
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 15:26:27 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 28-08-2024 15:26:27 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LoginSuite.xml
+
+[INFO] 28-08-2024 15:26:35 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - Username:MahmodAjmed
+[INFO] 28-08-2024 15:26:35 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 28-08-2024 15:26:36 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - Password:123458
+[INFO] 28-08-2024 15:26:36 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - Password:12345678
+[INFO] 28-08-2024 15:26:36 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - button is clicked
+[INFO] 28-08-2024 15:26:36 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - button is clicked
+[INFO] 28-08-2024 15:26:36 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/dashboard?id=185&refreshRate=OFF&relativeDate=last7Days
+[INFO] 28-08-2024 15:26:39 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/
+[INFO] 28-08-2024 15:26:39 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - error message:   Login Failed!
+[INFO] 28-08-2024 15:26:39 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 28-08-2024 15:26:39 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - Password:123458
+[INFO] 28-08-2024 15:26:39 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - button is clicked
+[INFO] 28-08-2024 15:26:42 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - Username:MahmodAjmed
+[INFO] 28-08-2024 15:26:42 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - Password:123458
+[INFO] 28-08-2024 15:26:42 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - button is clicked
+[INFO] 28-08-2024 15:26:42 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/
+[INFO] 28-08-2024 15:26:43 [TestNG-test-Login page test on google Chrome-2] [Utilities.LogsUtils] - error message:   Login Failed!
+[INFO] 28-08-2024 15:26:45 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/
+[INFO] 28-08-2024 15:26:46 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - error message:   Login Failed!
+[INFO] 28-08-2024 15:26:46 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 28-08-2024 15:26:46 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - Password:123458
+[INFO] 28-08-2024 15:26:46 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - button is clicked
+[INFO] 28-08-2024 15:26:49 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/
+[INFO] 28-08-2024 15:26:49 [TestNG-test-Login page test on google Chrome-1] [Utilities.LogsUtils] - error message:   Login Failed!

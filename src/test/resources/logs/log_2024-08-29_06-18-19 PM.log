@@ -1,0 +1,25 @@
+[DEBUG] 29-08-2024 18:18:20 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPage.Setup()[pri:0, instance:null] 820689667
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPage.tearout()[pri:0, instance:null] -1642903244
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPage.TC3_CheckAddDashboardButton()[pri:1, instance:Tests.LandingPageTC@466276d8] 892557358
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 29-08-2024 18:18:20 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 29-08-2024 18:18:20 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 29-08-2024 18:18:29 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 29-08-2024 18:18:29 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 29-08-2024 18:18:29 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 29-08-2024 18:18:30 [main] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/dashboard?id=185&refreshRate=OFF&relativeDate=last7Days
+[INFO] 29-08-2024 18:18:30 [main] [Utilities.LogsUtils] - login Check:true
+[INFO] 29-08-2024 18:18:30 [main] [Utilities.LogsUtils] - Dashboard find:true

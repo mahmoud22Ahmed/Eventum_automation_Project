@@ -1,0 +1,41 @@
+[DEBUG] 01-09-2024 16:19:24 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LandingSuite.xml"
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.Setup()[pri:0, instance:null] -600573228
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.tearout()[pri:0, instance:null] 1925843299
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC1_CheckLogout()[pri:1, instance:Tests.LandingPageTC@49964d75] -280236743
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC2_SearchingInDashboardDropdown()[pri:1, instance:Tests.LandingPageTC@49964d75] 1426176844
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC3_CheckAddDashboardButton()[pri:1, instance:Tests.LandingPageTC@49964d75] 1203103964
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 01-09-2024 16:19:25 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 01-09-2024 16:19:25 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LandingSuite.xml
+
+[INFO] 01-09-2024 16:19:33 [TestNG-test-Landing Page test on google Chrome-3] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-1] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-2] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-3] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-3] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-1] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-2] [Utilities.LogsUtils] - Password:12345678
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-1] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 16:19:34 [TestNG-test-Landing Page test on google Chrome-2] [Utilities.LogsUtils] - button is clicked
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-3] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/dashboard?id=185&refreshRate=OFF&relativeDate=last7Days
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-3] [Utilities.LogsUtils] - login Check:true
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-1] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/dashboard?id=185&refreshRate=OFF&relativeDate=last7Days
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-1] [Utilities.LogsUtils] - login Check:true
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-2] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/reporter/dashboard?id=185&refreshRate=OFF&relativeDate=last7Days
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-2] [Utilities.LogsUtils] - login Check:true
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-3] [Utilities.LogsUtils] - New Dashboard
+[INFO] 01-09-2024 16:19:35 [TestNG-test-Landing Page test on google Chrome-3] [Utilities.LogsUtils] - Dashboard find:true
+[INFO] 01-09-2024 16:19:36 [TestNG-test-Landing Page test on google Chrome-2] [Utilities.LogsUtils] - Dashboard find:false
+[INFO] 01-09-2024 16:19:36 [TestNG-test-Landing Page test on google Chrome-1] [Utilities.LogsUtils] - CurrentURL: http://192.168.125.30:8080/#/
+[INFO] 01-09-2024 16:19:36 [TestNG-test-Landing Page test on google Chrome-1] [Utilities.LogsUtils] - login Check:true

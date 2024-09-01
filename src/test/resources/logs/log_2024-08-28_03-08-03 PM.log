@@ -1,0 +1,21 @@
+[DEBUG] 28-08-2024 15:08:03 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.Setup()[pri:0, instance:null] -1741851915
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.tearout()[pri:0, instance:null] 919896390
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC2_InvalidLogin()[pri:0, instance:Tests.LoginTC@1a20270e] -559799030
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 15:08:04 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 28-08-2024 15:08:04 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 28-08-2024 15:08:14 [main] [Utilities.LogsUtils] -   Login Failed!
+[INFO] 28-08-2024 15:08:17 [main] [Utilities.LogsUtils] -   Login Failed!

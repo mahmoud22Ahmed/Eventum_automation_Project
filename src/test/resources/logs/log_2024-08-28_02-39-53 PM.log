@@ -1,0 +1,20 @@
+[DEBUG] 28-08-2024 14:39:54 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LoginSuite.xml"
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.Setup()[pri:0, instance:null] -1741851915
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.tearout()[pri:0, instance:null] 919896390
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC1_ValidLogin()[pri:0, instance:Tests.LoginTC@6f63b475] 1756357429
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC2_InvalidLogin()[pri:0, instance:Tests.LoginTC@6f63b475] 870691441
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 28-08-2024 14:39:54 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 28-08-2024 14:39:54 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LoginSuite.xml
+
