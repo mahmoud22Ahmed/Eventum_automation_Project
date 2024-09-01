@@ -1,5 +1,6 @@
 package Listeners;
 
+import DriverFactory.DriverFactory;
 import Utilities.SelenuimUtil;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -30,7 +31,7 @@ public class ITest implements ITestListener {
     public void onTestFailure(ITestResult Result)
     {
         System.out.println("The name of the testcase failed is :"+Result.getName());
-
+        SelenuimUtil.takeScreenShot(DriverFactory.getDriver(),Result.getName());
     }
 
     // When Test case get Skipped, this method is called.
@@ -51,6 +52,7 @@ public class ITest implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult Result)
     {
-        System.out.println("The name of the testcase passed is :"+Result.getName());
+        System.out.println("The name of the testcase passed is :"+Result.getName()+ Result.getTestClass());
+        SelenuimUtil.takeScreenShot(DriverFactory.getDriver(),Result.getName());
     }
 }

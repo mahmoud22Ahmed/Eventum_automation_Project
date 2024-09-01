@@ -1,0 +1,4 @@
+{
+  "dashboard_name": "Name must be at least 3 characters and at most 50",
+  "dashboard_description" : "Number must be at least 0 characters and at most 1000 "
+}

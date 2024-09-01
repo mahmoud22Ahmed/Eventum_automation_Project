@@ -1,7 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Main Suite">
+<suite name="Main Suite" parallel="methods"  thread-count="16">
 
     <suite-files>
         <suite-file path="LoginSuite.xml"></suite-file>
+        <suite-file path="LandingSuite.xml"></suite-file>
+        <suite-file path="AddDashboard.xml"></suite-file>
     </suite-files>
 </suite>

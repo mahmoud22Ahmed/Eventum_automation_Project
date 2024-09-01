@@ -1,0 +1,5 @@
+{
+   "popup": "  Login Failed!",
+   "empty_password": "Password is required",
+   "empty_username": "Username is required"
+}

@@ -2,10 +2,12 @@ package Utilities;
 
 import org.apache.maven.surefire.shared.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -35,7 +37,7 @@ public class SelenuimUtil {
     }
 
     public static WebDriverWait generalWait(WebDriver driver) {
-        return new WebDriverWait(driver, Duration.ofSeconds(5));
+        return new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
     public static void scrolling(WebDriver driver, By locator) {
@@ -67,6 +69,16 @@ public class SelenuimUtil {
             LogsUtils.error(e.getMessage());
         }
     }
+
+    public static void clearTextField(WebDriver driver,By locetor){
+        WebElement inputField = driver.findElement(locetor);
+        // Use JavaScript to clear the input field
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value='';", inputField);
+        
+    }
+
+
 
 
 

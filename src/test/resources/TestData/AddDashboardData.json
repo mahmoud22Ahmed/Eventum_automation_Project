@@ -1,0 +1,12 @@
+{
+  "dashboard_name"        : "UCL",
+  "dashboard_description" : "it is the great dashboard in the world",
+  "groups"            : ["TMG_Group>TG_Group_2", "TMG_Group>TG_Group_2",
+                         "TMG_Group>TG_Group_5", "TMG_Group>TG_Group_6",
+                         "TMG_Group>TG_Group_7"],
+  "landing_date" : ["Custom Range", "Today", "Last Hour", "Last 3 Hours"
+                    ,"Last 6 Hours" ,"Last 12 Hours","Last 24 Hours"
+                    ,"Last 7 Days","Yesterday"],
+  "custom_range_start" : "01/09/24 00:00",
+  "custom_range_end"   : "01/01/25 00:00"
+}

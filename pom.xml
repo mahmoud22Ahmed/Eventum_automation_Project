@@ -13,7 +13,7 @@
         <maven.compiler.target>22</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <aspectj.version>1.9.21.1</aspectj.version>
-        <Suite.file>TestRunner.xml</Suite.file>
+        <LoginSuite.file>LoginSuite.xml</LoginSuite.file>
     </properties>
     <build>
         <pluginManagement>
@@ -24,7 +24,7 @@
                     <version>3.0.0</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>${Suite.file}</suiteXmlFile>
+                            <suiteXmlFile>${LoginSuite.file}</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
