@@ -27,9 +27,7 @@ public class AddDashboardPageTC {
     private final String CustomDateEnd = (String) DataUtil.getJsonData("AddDashboardData","custom_range_end");
 
     private final String LoginPage_URL = DataUtil.getPropertyValue("Environment","LOGIN_URL");
-    private final String LandPage_URL = DataUtil.getPropertyValue("Environment","LANDING_URL");
     private final String Browser = DataUtil.getPropertyValue("Environment","BROWSER");
-
 
     //error Messages
     private final String DashboardNameMessage = (String) DataUtil.getJsonData("AddDashboardErrorMessage","dashboard_name");
@@ -47,6 +45,17 @@ public class AddDashboardPageTC {
         new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
     }
 
+    /*
+    @Title: Test case for adding a valid dashboard
+    @Steps:
+        1. Enter valid dashboard name
+        2. Enter valid dashboard description
+        3. Choose valid landing date
+        4. Choose valid groups for edit and view
+        5. Submit the form
+        6. Verify the dashboard is added
+    @Expected result: Dashboard successfully added and verified on the landing page
+   */
     @Test(groups = {"Valid"} , priority =  1)
     public void TC1_AddValidDashboard(){
         SoftAssert SAsserter = new SoftAssert();
@@ -59,6 +68,13 @@ public class AddDashboardPageTC {
         SAsserter.assertAll();
     }
 
+    /*
+    @Title: Test case for checking validation messages with an empty form
+    @Steps:
+        1. Attempt to submit the form without filling any fields
+        2. Verify the error message for the dashboard name field
+    @Expected result: Correct error message is displayed for the empty dashboard name field
+   */
     @Test(groups = {"Invalid"} , priority =  1)
     public void TC2_CheckSubmitEmptyForm(){
         SoftAssert SAsserter = new SoftAssert();
@@ -68,6 +84,15 @@ public class AddDashboardPageTC {
         SAsserter.assertAll();
     }
 
+
+    /*
+        @Title: Test case for selecting a custom date range
+        @Steps:
+            1. Choose a landing date
+            2. Select a custom date range
+            3. Verify the selected custom date range is correct
+        @Expected result: Custom date range is correctly applied and verified
+    */
     @Test(groups = {"Valid"} , priority =  2)
     public void TC3_CheckSelectCustomRange(){
         SoftAssert SAsserter = new SoftAssert();
@@ -80,19 +105,25 @@ public class AddDashboardPageTC {
         SAsserter.assertAll();
     }
 
+    /*
+    @Title: Test case for checking valid dashboard name and description length
+    @Steps:
+        1. Test with a 2-character dashboard name and verify the error message
+        2. Test with a 51-character dashboard name and verify the error message
+        3. Test with a 1001-character dashboard description and verify the error message
+    @Expected result: Correct error messages are displayed for invalid lengths
+    */
     @Test(groups = {"Valid"} , priority =  3)
     public void TC4_CheckValidRange(){
         SoftAssert SAsserter = new SoftAssert();
         boolean LengthChecker;
         String Randomstr;
-
-
-            Randomstr = DataUtil.generateRandomString(2);
-            LogsUtils.info("Test Dashboard name with 2 characters");
-            LengthChecker = new AddPage(DriverFactory.getDriver())
+        Randomstr = DataUtil.generateRandomString(2);
+        LogsUtils.info("Test Dashboard name with 2 characters");
+        LengthChecker = new AddPage(DriverFactory.getDriver())
                     .enterDashboardName(Randomstr)
                     .clickSubmit().CheckErrorMessage("DashboardName", DashboardNameMessage);
-            SAsserter.assertTrue(LengthChecker);
+        SAsserter.assertTrue(LengthChecker);
 
 
         try {

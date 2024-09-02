@@ -27,6 +27,9 @@ public class LandingPage {
     private final By AddDashboardButton = By.xpath("//a[text() = 'Dashboard']");
     private final By AddDashboardPageTitle = By.xpath("//h6[text() = 'New Dashboard']");
     private final By CurrentDashboard = By.xpath("//label[@class = 'navBtnText']");
+    private final By ActionsMenuButton = By.id("designSpaceActionMenu");
+    private final By DeleteDashboardButton = By.id("deleteDesignSpace");
+    private final By DeletePopupYesButton = By.xpath("//button[text() = 'Yes']") ;
     private WebDriver Driver;
 
     public LandingPage(WebDriver driver){
@@ -38,13 +41,51 @@ public class LandingPage {
         Driver.findElement(LogoutButton).click();
         return new LoginPage(Driver);
     }
+    public WebElement SearchOnDashboard(String DashboardName){
+        String CurrentDashboard;
+        SelenuimUtil.clickingOnElement(Driver,DashboardsDropdownButton);
+        SelenuimUtil.clearTextField(Driver,DropdownSeatchingInput);
+        SelenuimUtil.sendData(Driver,DropdownSeatchingInput,DashboardName + Keys.ENTER);
+        try {
+            SelenuimUtil.generalWait(Driver).until(ExpectedConditions.visibilityOfElementLocated(SeachedDashboardName));
+        }catch (Exception e){
+            LogsUtils.info("exception at SearchInDashboardDropdown");
 
-    public boolean SearchInDashboardDropdown(String DashboardName){
+        }
+        FindenDashboards = Driver.findElements(SeachedDashboardName);
+        for (WebElement Dashboard:FindenDashboards) {
+            CurrentDashboard = Dashboard.getText();
+            LogsUtils.info(CurrentDashboard);
+            if (CurrentDashboard.equals(DashboardName)) {
+                return  Dashboard;
+            }
+        }
+        LogsUtils.info("not found");
+        return null;
+    }
+
+    public boolean checkSearchinDashboardDropdown(String DashboardName){
+        WebElement FindenDashboard;
+        FindenDashboard = SearchOnDashboard(DashboardName);
+
+        if (FindenDashboard == null){
+            return false  ;
+        }
+
+        if (FindenDashboard.getText().equals(DashboardName))
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+
+    }
+    /*public boolean checkSearchinDashboardDropdown(String DashboardName){
         String CurrentDashboard;
 
-        SelenuimUtil.clickingOnElement(Driver,DashboardsDropdownButton);
-        SelenuimUtil.sendData(Driver,DropdownSeatchingInput,DashboardName + Keys.ENTER);
-        //Driver.findElement(DropdownSeatchingInput).sendKeys(DashboardName + Keys.ENTER);
+        SearchOnDashboard(DashboardName);
         try {
             SelenuimUtil.generalWait(Driver).until(ExpectedConditions.visibilityOfElementLocated(SeachedDashboardName));
         }catch (Exception e){
@@ -63,11 +104,38 @@ public class LandingPage {
         return false;
 
     }
-
+     */
     public LandingPage clickAddDashboard(){
         Driver.findElement(NewDashboardButton).click();
         Driver.findElement(AddDashboardButton).click();
         return this;
+    }
+
+    public boolean DeleteDashboard(String DashboardName){
+        int NumberOfDashboards;
+        WebElement DesiredDashboard;
+        DesiredDashboard = SearchOnDashboard(DashboardName);
+        if (DesiredDashboard == null){
+            LogsUtils.info("there is no dashboard with this name");
+            return false;
+        }
+        FindenDashboards = Driver.findElements(SeachedDashboardName);
+        NumberOfDashboards = FindenDashboards.size();
+        LogsUtils.info(""+NumberOfDashboards);
+        DesiredDashboard.click();
+        SelenuimUtil.clickingOnElement(Driver,ActionsMenuButton);
+        SelenuimUtil.clickingOnElement(Driver,DeleteDashboardButton);
+        SelenuimUtil.clickingOnElement(Driver,DeletePopupYesButton);
+        SearchOnDashboard(DashboardName);
+        FindenDashboards = Driver.findElements(SeachedDashboardName);
+        LogsUtils.info(""+FindenDashboards.size());
+        if (FindenDashboards.size() == NumberOfDashboards -1 ){
+            return true;
+        }
+        else {
+            return false;
+        }
+
     }
     public boolean CheckPageTitle(String PageTitle){
         String ActualPageTitle;

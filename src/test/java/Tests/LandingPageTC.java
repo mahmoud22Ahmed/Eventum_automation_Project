@@ -74,7 +74,7 @@ public class LandingPageTC {
 
 
         DashboardFind = new Pages.LandingPage(DriverFactory.getDriver())
-                            .SearchInDashboardDropdown("Mahmoud");
+                            .checkSearchinDashboardDropdown("Mahmoud");
 
         LogsUtils.info("Dashboard find:" + DashboardFind);
 
@@ -105,6 +105,22 @@ public class LandingPageTC {
         SAsserter.assertTrue(DashboardPage);
         SAsserter.assertAll();
     }
+
+    @Test(groups = {"Valid"} , priority =  1)
+    public void TC4_checkDeleteDashboard(){
+        boolean checker;
+        SoftAssert SAsserter = new SoftAssert();
+        new Pages.LandingPage(DriverFactory.getDriver()).clickAddDashboard();
+        new Pages.AddPage(DriverFactory.getDriver()).enterDashboardName("Messi")
+                .clickSubmit();
+        checker = new Pages.LandingPage(DriverFactory.getDriver())
+                .DeleteDashboard("Messi");
+        SAsserter.assertTrue(checker);
+        SAsserter.assertAll();
+    }
+
+
+
 
     @AfterMethod(alwaysRun = true)
     private void tearout(){
