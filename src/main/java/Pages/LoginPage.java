@@ -16,9 +16,10 @@ public class LoginPage {
     private final By Username = By.xpath("//input[@name = 'username']");
     private final By Password = By.xpath("//input[@name = 'password']");
     private final By LoginButton = By.xpath("//button[contains(@class,'submitForm')]");
-    private final By popupMessageLocetor = By.xpath("//*[@id=\"page-content-wrapper\"]/div/div/div[2]/div/div[2]/div[1]/div/div/strong");
+    private final By popupMessageLocetor = By.xpath("//div[@class = 'alert alert-danger'] /strong");
     private final By usernameMessageLocetor = By.xpath("(//span[@class = 'warning-span '])[1]");
     private final By passwordMessageLocetor = By.xpath("(//span[@class = 'warning-span '])[2]");
+    private final By NavbarTitle  =By.xpath("//div[@class = 'navbar-title headerEllipsis']");;
     //Page driver
     private WebDriver Driver;
 
@@ -41,8 +42,8 @@ public class LoginPage {
     }
 
     public LoginPage ClickLogin(){
-       // SelenuimUtil.clickingOnElement(Driver,LoginButton);
-        Driver.findElement(LoginButton).click();
+        SelenuimUtil.clickingOnElement(Driver,LoginButton);
+        //Driver.findElement(LoginButton).click();
         LogsUtils.info("button is clicked");
         return this;
     }
@@ -52,13 +53,29 @@ public class LoginPage {
         try {
             SelenuimUtil.generalWait(Driver).until(ExpectedConditions.urlToBe(ExpectedURL));
         }catch (Exception e){
-              return Boolean.parseBoolean(null);
+              return false;
         }
 
         CurrentURL = Driver.getCurrentUrl();
         LogsUtils.info("CurrentURL: "+ CurrentURL);
         return CurrentURL.equals(ExpectedURL);
 
+    }
+
+    public boolean CheckLoginSuccess(){
+        try {
+
+            SelenuimUtil.generalWait(Driver).until(ExpectedConditions
+                    .visibilityOfElementLocated(NavbarTitle));
+        }
+        catch (Exception e){
+            return false;
+        }
+        String CurrentTitle = SelenuimUtil.getText(Driver,NavbarTitle);
+        if (CurrentTitle.equals("Capacity Monitoring System")){
+             return true;
+        }
+        return false;
     }
 
     public boolean CheckErrorMessage(String element,String expectedMessage){

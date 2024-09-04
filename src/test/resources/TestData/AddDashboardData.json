@@ -1,7 +1,7 @@
 {
-  "dashboard_name"        : "UCL",
+  "dashboard_name"        : "Mahmoud 0ka",
   "dashboard_description" : "it is the great dashboard in the world",
-  "groups"            : ["TMG_Group>TG_Group_2", "TMG_Group>TG_Group_2",
+  "groups"            : ["TMG_Group>TG_Group_2", "TMG_Group>TG_Group_2>UG_Group_3",
                          "TMG_Group>TG_Group_5", "TMG_Group>TG_Group_6",
                          "TMG_Group>TG_Group_7"],
   "landing_date" : ["Custom Range", "Today", "Last Hour", "Last 3 Hours"

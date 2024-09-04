@@ -5,5 +5,8 @@
         <suite-file path="LoginSuite.xml"></suite-file>
         <suite-file path="LandingSuite.xml"></suite-file>
         <suite-file path="AddDashboard.xml"></suite-file>
+        <suite-file path="EditDashboard.xml"></suite-file>
+        <suite-file path="Unfav_FavDashboard.xml"></suite-file>
+        <suite-file path="CloneDashboard.xml"></suite-file>
     </suite-files>
 </suite>

@@ -59,10 +59,10 @@ public class LoginTC {
      */
     @Test(groups = {"Valid"} , priority = 1)
     private void TC1_ValidLogin() throws InterruptedException, IOException {
-        SoftAssert SAsserter = new SoftAssert();
+        
         boolean LoginCheck;
         LoginCheck = new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
-                .EnterPassword(ValidPassword).ClickLogin().CheckLoginCurrentURL(LandPage_URL);
+                .EnterPassword(ValidPassword).ClickLogin().CheckLoginSuccess();
         Assert.assertTrue(LoginCheck);
 
     }
@@ -84,13 +84,13 @@ public class LoginTC {
 
         //login with invalid username and password
         LoginCheck = new LoginPage(DriverFactory.getDriver()).EnterUsername(InvalidUsername)
-                .EnterPassword(InvalidPassword).ClickLogin().CheckLoginCurrentURL(LandPage_URL);
+                .EnterPassword(InvalidPassword).ClickLogin().CheckLoginSuccess();
         errorcheck = new LoginPage(DriverFactory.getDriver()).CheckErrorMessage(popup_tag,popupMessage);
         SAsserter.assertFalse(LoginCheck | !errorcheck);
 
         //login with invalid username and valid password
         LoginCheck = new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
-                .EnterPassword(InvalidPassword).ClickLogin().CheckLoginCurrentURL(LandPage_URL);
+                .EnterPassword(InvalidPassword).ClickLogin().CheckLoginSuccess();
 
         errorcheck = new LoginPage(DriverFactory.getDriver()).CheckErrorMessage(popup_tag,popupMessage);
         SAsserter.assertFalse(LoginCheck | !errorcheck);
@@ -111,7 +111,6 @@ public class LoginTC {
     */
     @Test(groups = {"Invalid"} , priority =  1)
     private void TC3_EmptyLogin() throws InterruptedException, IOException {
-        SoftAssert SAsserter = new SoftAssert();
         boolean LoginButtonCheck;
         boolean errorcheck;
 
@@ -122,9 +121,7 @@ public class LoginTC {
         errorcheck = new LoginPage(DriverFactory.getDriver()).CheckErrorMessage(password_tag,emptyPasswordMessage) &
                 new LoginPage(DriverFactory.getDriver()).CheckErrorMessage(username_tag,emptyUsernameMessage);
         LogsUtils.info("error checking:" + errorcheck);
-        SAsserter.assertTrue(!LoginButtonCheck & errorcheck);
-
-        SAsserter.assertAll();
+        Assert.assertTrue(!LoginButtonCheck & errorcheck);
     }
 
 

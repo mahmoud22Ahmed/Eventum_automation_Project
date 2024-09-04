@@ -5,7 +5,7 @@
         <listener class-name="Listeners.ITest"/>
     </listeners>
 
-    <test name="Add Dashboard page test on google Chrome">
+    <test name="test on google Chrome">
         <groups>
             <run>
                 <include name="Valid"/>

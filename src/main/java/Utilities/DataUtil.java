@@ -57,7 +57,7 @@ public class DataUtil {
 
     public static String generateRandomString(int length) {
         // Characters pool to use for generating the random string
-         final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&* ";
+         final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
          final SecureRandom RANDOM = new SecureRandom();
         StringBuilder sb = new StringBuilder(length);
 
