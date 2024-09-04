@@ -11,6 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import static HelperFn.Helper.Clean;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -41,8 +42,9 @@ public class AddDashboardPageTC {
         DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         DriverFactory.getDriver().get(LoginPage_URL);
         new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
-                      .EnterPassword(ValidPassword).ClickLogin();
+                      .enterPassword(ValidPassword).clickLogin();
         new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
+
     }
 
     /*
@@ -56,16 +58,26 @@ public class AddDashboardPageTC {
         6. Verify the dashboard is added
     @Expected result: Dashboard successfully added and verified on the landing page
    */
-    @Test(groups = {"Valid"} , priority =  1)
+    @Test(groups = {"Valid"} , priority =  2 ,dependsOnMethods = "TC_CheckAddDashboardButton")
     public void TC1_AddValidDashboard(){
-        SoftAssert SAsserter = new SoftAssert();
+
         boolean AddCheck;
         new AddPage(DriverFactory.getDriver()).enterDashboardName(DashboardName)
                 .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
                 .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();;
         AddCheck = new LandingPage(DriverFactory.getDriver()).CheckCurrentDashboard(DashboardName);
-        SAsserter.assertTrue(AddCheck);
-        SAsserter.assertAll();
+
+        Assert.assertTrue(AddCheck);
+        Clean(DashboardName);
+
+    }
+
+    @Test(groups = {"Valid"},priority = 1)
+    public void TC_CheckAddDashboardButton(){
+        boolean PageTitle;
+        PageTitle =new LandingPage(DriverFactory.getDriver())
+                .CheckPageTitle("New Dashboard");
+        Assert.assertTrue(PageTitle);
     }
 
     /*
@@ -75,13 +87,12 @@ public class AddDashboardPageTC {
         2. Verify the error message for the dashboard name field
     @Expected result: Correct error message is displayed for the empty dashboard name field
    */
-    @Test(groups = {"Invalid"} , priority =  1)
+    @Test(groups = {"Invalid"} , priority =  3,dependsOnMethods = "TC_CheckAddDashboardButton")
     public void TC2_CheckSubmitEmptyForm(){
-        SoftAssert SAsserter = new SoftAssert();
+
         Boolean ValidationMessage;
         ValidationMessage = new AddPage(DriverFactory.getDriver()).clickSubmit().CheckErrorMessage("DashboardName",DashboardNameMessage);
-        SAsserter.assertTrue(ValidationMessage);
-        SAsserter.assertAll();
+        Assert.assertTrue(ValidationMessage);
     }
 
 
@@ -93,16 +104,15 @@ public class AddDashboardPageTC {
             3. Verify the selected custom date range is correct
         @Expected result: Custom date range is correctly applied and verified
     */
-    @Test(groups = {"Valid"} , priority =  2)
+    @Test(groups = {"Valid"} , priority =  3,dependsOnMethods = "TC_CheckAddDashboardButton")
     public void TC3_CheckSelectCustomRange(){
-        SoftAssert SAsserter = new SoftAssert();
+
         boolean DateChecker ;
         DateChecker = new AddPage(DriverFactory.getDriver()).chooseLandingDate(LandingDate[0])
                 .SelectCustomRange(CustomDateStart,CustomDateEnd)
                 .CheckCustomRange(CustomDateStart,CustomDateEnd);
-        SAsserter.assertTrue(DateChecker);
         LogsUtils.info("it is = "+ DateChecker);
-        SAsserter.assertAll();
+        Assert.assertTrue(DateChecker);
     }
 
     /*
@@ -113,7 +123,7 @@ public class AddDashboardPageTC {
         3. Test with a 1001-character dashboard description and verify the error message
     @Expected result: Correct error messages are displayed for invalid lengths
     */
-    @Test(groups = {"Valid"} , priority =  3)
+    @Test(groups = {"Valid"} , priority =  3 ,dependsOnMethods = "TC_CheckAddDashboardButton")
     public void TC4_CheckValidRange(){
         SoftAssert SAsserter = new SoftAssert();
         boolean LengthChecker;

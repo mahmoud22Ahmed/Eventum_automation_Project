@@ -5,10 +5,15 @@ import Utilities.SelenuimUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class AddPage {
+import java.util.ArrayList;
+import java.util.List;
+
+public class EditPage {
 
     //locetors
+    private List<WebElement> Groups = new ArrayList<WebElement>();
     private final By DashboardName = By.xpath("//input[@name = 'name']");
     private final By DashboardDescription = By.xpath("//textarea[contains(@class,'input-text')]");
     private final By GroupsEdit = By.xpath("(//div[contains(@class,'react-tags__search-input')] /input)[1]");
@@ -21,57 +26,55 @@ public class AddPage {
     private final By CustomRangeEnd = By.xpath("//input[@name = 'daterangepicker_end']");
     private final By DatepickerApplyButton = By.xpath("//button[text() = 'Apply']");
     private final By DatepickerValue = By.xpath("//span[@class=\"datepicker\"]");
+    private final By AllowedGroupsCounter = By.xpath("//label[contains(text(),'Allowed Groups')]");
     private final String DatepickerElement = "//li[@data-range-key = ";
-    private final By DashboardPageTitle = By.xpath("//h6[@class ='title-text']");
-
+    private final By GroupRow = By.xpath("//span[@class ='groupName']']");
 
     //driver
     private WebDriver Driver;
-
-    public AddPage(WebDriver driver) {
+    public EditPage(WebDriver driver) {
         this.Driver = driver;
     }
 
-    public AddPage enterDashboardName(String name){
+    public EditPage enterDashboardName(String name){
         SelenuimUtil.clearTextField(Driver,DashboardName);
         SelenuimUtil.sendData(Driver,DashboardName,name);
         return  this;
     }
 
-    public AddPage enterDashboardDescription(String name){
+    public EditPage enterDashboardDescription(String name){
         SelenuimUtil.clearTextField(Driver,DashboardDescription);
         SelenuimUtil.sendData(Driver,DashboardDescription,name);
         return this;
     }
 
-    public AddPage chooseGroupsEdit(String name){
+    public EditPage chooseGroupsEdit(String name){
         SelenuimUtil.clearTextField(Driver,GroupsEdit);
         SelenuimUtil.sendData(Driver,GroupsEdit,name + Keys.ENTER);
-        Driver.findElement(DashboardPageTitle).click();
         return this;
     }
 
-    public AddPage chooseGroupsView(String name){
+    public EditPage chooseGroupsView(String name){
         SelenuimUtil.clearTextField(Driver,GroupsView );
         SelenuimUtil.sendData(Driver,GroupsView,name + Keys.ENTER);
-        Driver.findElement(DashboardPageTitle).click();
         return this;
     }
 
-    public AddPage chooseLandingDate(String Date){
+    public EditPage chooseLandingDate(String Date){
         By Datepicker = By.xpath(DatepickerElement + "\""+Date+"\"]");
         SelenuimUtil.clickingOnElement(Driver,DatepickerDropdown);
         SelenuimUtil.clickingOnElement(Driver,Datepicker);
         return this;
     }
 
-    public AddPage clickSubmit() {
+    public EditPage clickSubmit() {
         SelenuimUtil.scrolling(Driver,SubmitButton);
         SelenuimUtil.clickingOnElement(Driver,SubmitButton);
         return this;
     }
 
-    public AddPage SelectCustomRange(String StartDate ,String EndDate){
+
+    public EditPage SelectCustomRange(String StartDate ,String EndDate){
         SelenuimUtil.clearTextField(Driver,CustomRangeStart);
         SelenuimUtil.sendData(Driver,CustomRangeStart,StartDate + Keys.ENTER);
 
@@ -88,7 +91,7 @@ public class AddPage {
         switch (element){
             case "DashboardName":
                 try {
-                  Message = SelenuimUtil.getText(Driver,DashboardNameMessageLocetor);
+                    Message = SelenuimUtil.getText(Driver,DashboardNameMessageLocetor);
                 }
                 catch (Exception e){
                     LogsUtils.info("the error message in Dashboard name isn't appeared");
@@ -120,6 +123,19 @@ public class AddPage {
         return Date.equals(ExpectedDate);
     }
 
+    public boolean CheckAllowedGroups(){
+        String AllowedGroup;
+        int extractedNumber;
 
-
+        AllowedGroup = SelenuimUtil.getText(Driver,AllowedGroupsCounter);
+        String number = AllowedGroup.split(":")[1].trim();
+        extractedNumber = Integer.parseInt(number);
+        LogsUtils.info("Allowed Groups : " + extractedNumber);
+        Groups = Driver.findElements(GroupRow);
+        LogsUtils.info("number Groups : " + Groups.size());
+        if (Groups.size() == extractedNumber){
+            return true;
+        }
+        return  false;
+    }
 }

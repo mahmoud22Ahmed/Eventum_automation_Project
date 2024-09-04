@@ -53,6 +53,6 @@ public class ITest implements ITestListener {
     public void onTestSuccess(ITestResult Result)
     {
         System.out.println("The name of the testcase passed is :"+Result.getName()+ Result.getTestClass());
-        SelenuimUtil.takeScreenShot(DriverFactory.getDriver(),Result.getName());
+        
     }
 }
