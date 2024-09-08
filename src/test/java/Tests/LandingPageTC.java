@@ -1,18 +1,17 @@
 package Tests;
 
 import DriverFactory.DriverFactory;
+import GeneralClasses.General;
 import Pages.LoginPage;
 import Utilities.DataUtil;
 import Utilities.LogsUtils;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.time.Duration;
 
-import static HelperFn.Helper.Clean;
+import static GeneralClasses.General.Clean;
 
 public class LandingPageTC {
     private final String ValidUsername = (String) DataUtil.getJsonData("ValidLoginData", "username");
@@ -24,30 +23,33 @@ public class LandingPageTC {
     public LandingPageTC() throws IOException {
     }
 
+    @BeforeClass(alwaysRun = true)
+    private void Start() throws IOException {
+        DriverFactory.setupDriver(Browser);
+        DriverFactory.getDriver().manage().window().maximize();
+        DriverFactory.getDriver().get(LoginPage_URL);
+        new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
+                .enterPassword(ValidPassword).clickLogin();
+
+    }
+
+
     @BeforeMethod(alwaysRun = true)
+    private void Setup() throws IOException {
+        General.getLandingPage(DriverFactory.getDriver());
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    /*@BeforeMethod(alwaysRun = true)
     private void Setup() throws IOException {
         DriverFactory.setupDriver(Browser);
         DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         DriverFactory.getDriver().get(LoginPage_URL);
-        new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
+        new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
                 .enterPassword(ValidPassword).clickLogin();
-    }
+    }   */
 
-    /*
-      @Title : Check logout functionality
-      @Steps:
-          1) Log in with valid credentials.
-          2) Click on the Welcome menu.
-          3) Click on the logout button.
-      @Expected result : The user should be redirected back to the login page.
-    */
-    @Test(groups = {"Valid"}, priority = 1)
-    private void TC1_CheckLogout() throws InterruptedException, IOException {
-        boolean LogOut;
-        LogOut = new Pages.LandingPage(DriverFactory.getDriver()).PressOnLogout()
-                .checkLoginCurrentURL(LoginPage_URL);
-        Assert.assertTrue(LogOut);
-    }
+
 
     /*
       @Title : Search for a newly added dashboard in the dropdown
@@ -64,7 +66,7 @@ public class LandingPageTC {
         String RandomDashboardName = DataUtil.generateRandomString(10);
 
         new Pages.LandingPage(DriverFactory.getDriver()).clickAddDashboard();
-        new Pages.AddPage(DriverFactory.getDriver())
+        new Pages.DashboardPage(DriverFactory.getDriver())
                 .enterDashboardName(RandomDashboardName).clickSubmit();
 
         DashboardFind = new Pages.LandingPage(DriverFactory.getDriver())
@@ -84,9 +86,10 @@ public class LandingPageTC {
     @Test(groups = {"Valid"}, priority = 1)
     private void TC3_CheckAddDashboardButton() throws InterruptedException, IOException {
         boolean DashboardPage;
+        String  AddDashboardTitle = "New Dashboard";
 
         DashboardPage = new Pages.LandingPage(DriverFactory.getDriver())
-                .clickAddDashboard().CheckPageTitle("New Dashboard");
+                .clickAddDashboard().checkPageTitle(AddDashboardTitle);
         LogsUtils.info("Dashboard page opened: " + DashboardPage);
 
         Assert.assertTrue(DashboardPage);
@@ -104,15 +107,15 @@ public class LandingPageTC {
     public void TC4_checkDeleteDashboard() {
         boolean checker;
         new Pages.LandingPage(DriverFactory.getDriver()).clickAddDashboard();
-        new Pages.AddPage(DriverFactory.getDriver()).enterDashboardName("UCL")
+        new Pages.DashboardPage(DriverFactory.getDriver()).enterDashboardName("UCL")
                 .clickSubmit();
         checker = new Pages.LandingPage(DriverFactory.getDriver())
-                .DeleteDashboard("UCL");
+                .deleteDashboard("UCL");
 
         Assert.assertTrue(checker);
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     private void tearout() {
         DriverFactory.quitDriver();
     }

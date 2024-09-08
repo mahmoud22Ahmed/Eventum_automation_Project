@@ -4,11 +4,10 @@ import Utilities.LogsUtils;
 import Utilities.SelenuimUtil;
 
 
+
 import org.openqa.selenium.*;
-import org.openqa.selenium.logging.Logs;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +22,9 @@ public class LandingPage {
     private final By DashboardsDropdownButton = By.xpath("//button[contains(@class ,'navigationBtn-btn')]");
     private final By SeachedDashboardName = By.xpath("//a[@class = 'item-inactive-bg-color']");
     private final By DropdownSeatchingInput = By.xpath("//input[contains(@class ,'mainTreeSearchBar-search-input')]");
-    private final By NewDashboardButton =By.xpath("//button[@id = 'addDashboard']");
+    private final By NewDashboardButton =By.id("addDashboard");
     private final By AddDashboardButton = By.xpath("//a[text() = 'Dashboard']");
-    private final By DashboardPageTitle = By.xpath("//h6[@class ='title-text']");
+    public static final By DashboardPageTitle = By.xpath("//h6[@class ='title-text']");
     private final By CurrentDashboard = By.xpath("//label[@class = 'navBtnText']");
     private final By ActionsMenuButton = By.id("designSpaceActionMenu");
     private final By DeleteDashboardButton = By.id("deleteDesignSpace");
@@ -42,22 +41,29 @@ public class LandingPage {
         this.Driver = driver;
     }
 
-    public LoginPage PressOnLogout() throws IOException {
+    public LoginPage pressOnLogout() throws IOException {
         Driver.findElement(LogoutMenu).click();
         Driver.findElement(LogoutButton).click();
         return new LoginPage(Driver);
     }
 
-    public WebElement SearchOnDashboard(String DashboardName){
+    private WebElement searchOnDashboard(String DashboardName){
         String CurrentDashboard;
         SelenuimUtil.clickingOnElement(Driver,DashboardsDropdownButton);
         SelenuimUtil.clearTextField(Driver,DropdownSeatchingInput);
         SelenuimUtil.sendData(Driver,DropdownSeatchingInput,DashboardName + Keys.ENTER);
         try {
-            SelenuimUtil.generalWait(Driver).until(ExpectedConditions.visibilityOfElementLocated(SeachedDashboardName));
-        }catch (Exception e){
-            LogsUtils.info("exception at SearchInDashboardDropdown");
-
+            // Wait until dashboards are visible and there are more than 2
+            SelenuimUtil.generalWait(Driver).until(driver -> {
+                FindenDashboards = driver.findElements(SeachedDashboardName);
+                // Check if there are more than 2 dashboards and they are visible
+                return !FindenDashboards.get(FindenDashboards.size() - 1).getText().equals("Default")
+                        && FindenDashboards.stream().allMatch(WebElement::isDisplayed);
+            });
+            // SelenuimUtil.generalWait(Driver).until(ExpectedConditions.visibilityOfElementLocated(SeachedDashboardName));
+        }catch (TimeoutException e ){
+            LogsUtils.info("Exception @ :"+ e.getStackTrace());
+            return null;
         }
         FindenDashboards = Driver.findElements(SeachedDashboardName);
         for (WebElement Dashboard:FindenDashboards) {
@@ -73,7 +79,7 @@ public class LandingPage {
 
     public boolean checkSearchinDashboardDropdown(String DashboardName){
         WebElement FindenDashboard;
-        FindenDashboard = SearchOnDashboard(DashboardName);
+        FindenDashboard = searchOnDashboard(DashboardName);
 
         if (FindenDashboard == null){
             return false  ;
@@ -98,7 +104,7 @@ public class LandingPage {
 
     public LandingPage clickEditButton(String DashboardName){
         WebElement DesiredDashboard;
-        DesiredDashboard = SearchOnDashboard(DashboardName);
+        DesiredDashboard = searchOnDashboard(DashboardName);
         if (DesiredDashboard == null){
             LogsUtils.info("there is no dashboard with this name");
             throw new RuntimeException("the dashboard isn't find");
@@ -109,27 +115,20 @@ public class LandingPage {
         return this;
     }
 
-    public LandingPage CloneDashboard(String DashboardName){
-        WebElement DesiredDashboard;
-        DesiredDashboard = SearchOnDashboard(DashboardName);
-        if (DesiredDashboard == null){
-            LogsUtils.info("there is no dashboard with this name");
-            throw new RuntimeException("the dashboard isn't find");
-        }
-        DesiredDashboard.click();
+    public LandingPage cloneDashboard(String DashboardName){
         SelenuimUtil.clickingOnElement(Driver,ActionsMenuButton);
         SelenuimUtil.clickingOnElement(Driver,CloneDashboardButton);
         Driver.findElement(NavbarTitle).click();
         return this;
     }
 
-    public LandingPage ClickFavoriteButton(String DashboardName){
+    public LandingPage clickFavoriteButton(String DashboardName){
         WebElement DesiredDashboard;
         SelenuimUtil.clickingOnElement(Driver,FavoriteButton);
         return this;
     }
 
-    public boolean CheckFavoriteDashboard(String DashboardName){
+    public boolean checkFavoriteDashboard(String DashboardName){
         String CurrentDashboard;
 
        // Driver.navigate().refresh();
@@ -140,8 +139,9 @@ public class LandingPage {
         
         try {
             SelenuimUtil.generalWait(Driver).until(ExpectedConditions.visibilityOfElementLocated(SeachedDashboardName));
-        }catch (Exception e){
-            LogsUtils.info("exception at SearchInDashboardDropdown");
+        }catch (TimeoutException e){
+            LogsUtils.info("Exception @ :"+ e.getStackTrace());
+            return false;
         }
         FindenDashboards = Driver.findElements(SeachedDashboardName);
         LogsUtils.info("loop start");
@@ -161,7 +161,7 @@ public class LandingPage {
         return false;
     }
 
-    public void DeleteCurrentDashboard(){
+    public void deleteCurrentDashboard(){
         SelenuimUtil.clickingOnElement(Driver, ActionsMenuButton);
         SelenuimUtil.clickingOnElement(Driver, DeleteDashboardButton);
         SelenuimUtil.clickingOnElement(Driver, DeletePopupYesButton);
@@ -171,10 +171,10 @@ public class LandingPage {
 
 
 
-    public boolean DeleteDashboard(String DashboardName){
+    public boolean deleteDashboard(String DashboardName){
         int NumberOfDashboards;
         WebElement DesiredDashboard;
-        DesiredDashboard = SearchOnDashboard(DashboardName);
+        DesiredDashboard = searchOnDashboard(DashboardName);
         if (DesiredDashboard == null){
             LogsUtils.info("there is no dashboard with this name");
             return false;
@@ -186,7 +186,7 @@ public class LandingPage {
         SelenuimUtil.clickingOnElement(Driver,ActionsMenuButton);
         SelenuimUtil.clickingOnElement(Driver,DeleteDashboardButton);
         SelenuimUtil.clickingOnElement(Driver,DeletePopupYesButton);
-        SearchOnDashboard(DashboardName);
+        searchOnDashboard(DashboardName);
         FindenDashboards = Driver.findElements(SeachedDashboardName);
         LogsUtils.info("after deleting"+FindenDashboards.size());
 
@@ -198,14 +198,15 @@ public class LandingPage {
         }
 
     }
-    public boolean CheckPageTitle(String PageTitle){
+
+    public boolean checkPageTitle(String PageTitle){
         String ActualPageTitle;
         ActualPageTitle = SelenuimUtil.getText(Driver, DashboardPageTitle);
         LogsUtils.info(ActualPageTitle);
         return   ActualPageTitle.equals(PageTitle);
     }
 
-    public boolean CheckCurrentDashboard(String name){
+    public boolean checkCurrentDashboard(String name){
         String DashboardName;
         DashboardName = SelenuimUtil.getText(Driver,CurrentDashboard);
         LogsUtils.info(DashboardName);

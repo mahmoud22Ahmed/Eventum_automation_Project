@@ -1,22 +1,23 @@
 package Tests;
 
 import DriverFactory.DriverFactory;
-import static HelperFn.Helper.Clean;
+import static GeneralClasses.General.Clean;
+import static GeneralClasses.General.getValidationMessages;
 
-import Pages.AddPage;
-import Pages.EditPage;
+import GeneralClasses.General;
+import Pages.DashboardPage;
 import Pages.LandingPage;
 import Pages.LoginPage;
 import Utilities.DataUtil;
 import Utilities.LogsUtils;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EditDashboardTC {
     private final String ValidUsername = (String) DataUtil.getJsonData("ValidLoginData", "username");
@@ -35,17 +36,30 @@ public class EditDashboardTC {
     private final String DashboardNameMessage = (String) DataUtil.getJsonData("AddDashboardErrorMessage", "dashboard_name");
     private final String DashboarddescriMessage = (String) DataUtil.getJsonData("AddDashboardErrorMessage", "dashboard_description");
 
+    private String RandomDashboarddescri,RandomDashboardName;
+
     public EditDashboardTC() throws IOException {
     }
 
+    @BeforeClass(alwaysRun = true)
+    private void Start() throws IOException {
+        DriverFactory.setupDriver(Browser);
+        DriverFactory.getDriver().manage().window().maximize();
+
+        DriverFactory.getDriver().get(LoginPage_URL);
+        new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
+                .enterPassword(ValidPassword).clickLogin();
+
+    }
+
+
     @BeforeMethod(alwaysRun = true)
     private void Setup() throws IOException {
-        DriverFactory.setupDriver(Browser);
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-        DriverFactory.getDriver().get(LoginPage_URL);
-        new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
-                .enterPassword(ValidPassword).clickLogin();
+        General.getLandingPage(DriverFactory.getDriver());
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
     }
+
 
     /*
       @Title: Test case for editing a valid dashboard
@@ -59,23 +73,24 @@ public class EditDashboardTC {
     */
     @Test(groups = {"Valid"}, priority = 2 ,dependsOnMethods = "TC2_CheckEditDashboardButton")
     public void TC1_EditValidDashboard() {
-        String RandomDashboardName = DataUtil.generateRandomString(10);
-        String RandomDashboarddescri = DataUtil.generateRandomString(50);
+        RandomDashboardName = DataUtil.generateRandomString(10);
+        RandomDashboarddescri = DataUtil.generateRandomString(10);
 
         boolean Editcheck;
-
-        new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(DashboardName)
-                .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
+        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
+                .enterDashboardDescription(RandomDashboarddescri).chooseLandingDate(LandingDate[3])
                 .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();
 
-        new LandingPage(DriverFactory.getDriver()).clickEditButton(DashboardName);
-        new EditPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
+        new LandingPage(DriverFactory.getDriver()).clickEditButton(RandomDashboardName);
+
+        RandomDashboardName = DataUtil.generateRandomString(10);
+        RandomDashboarddescri = DataUtil.generateRandomString(10);
+        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
                 .enterDashboardDescription(RandomDashboarddescri)
                 .chooseLandingDate(LandingDate[2]).clickSubmit();
-        Editcheck = new LandingPage(DriverFactory.getDriver()).CheckCurrentDashboard(RandomDashboardName);
+        Editcheck = new LandingPage(DriverFactory.getDriver()).checkCurrentDashboard(RandomDashboardName);
         Assert.assertTrue(Editcheck);
-        Clean(RandomDashboardName);
+
         
     }
 
@@ -90,15 +105,15 @@ public class EditDashboardTC {
     @Test(groups = {"Valid"}, priority = 1)
     public void TC2_CheckEditDashboardButton() {
         boolean TitleChecker;
-        new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(DashboardName)
+        RandomDashboardName = DataUtil.generateRandomString(5);
+        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
                 .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
                 .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();
 
-        TitleChecker = new LandingPage(DriverFactory.getDriver()).clickEditButton(DashboardName)
-                .CheckPageTitle("Edit Dashboard");
+        TitleChecker = new LandingPage(DriverFactory.getDriver()).clickEditButton(RandomDashboardName)
+                .checkPageTitle("Edit Dashboard");
         Assert.assertTrue(TitleChecker);
-        Clean(DashboardName);
+
     }
 
     /*
@@ -112,18 +127,16 @@ public class EditDashboardTC {
     */
     @Test(groups = {"Invalid"}, priority = 2 ,dependsOnMethods = "TC2_CheckEditDashboardButton")
     public void TC3_CheckEditEmptyForm() {
-        boolean ValidationMessage;
-        new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(DashboardName)
-                .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
-                .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();
 
-        new LandingPage(DriverFactory.getDriver()).clickEditButton(DashboardName);
-        ValidationMessage = new EditPage(DriverFactory.getDriver())
-                .enterDashboardName(" ").clickSubmit()
-                .CheckErrorMessage("DashboardName", DashboardNameMessage);
-        Assert.assertTrue(ValidationMessage);
-        Clean(DashboardName);
+        Boolean ValidationMessageChecker;
+        List<String> Messages = new ArrayList<String>(3);
+
+        new DashboardPage(DriverFactory.getDriver())
+                .enterDashboardName(" ").clickSubmit();
+        Messages = General.getValidationMessages(DriverFactory.getDriver());
+        ValidationMessageChecker = Messages.contains(DashboardNameMessage);
+        Assert.assertTrue(ValidationMessageChecker);
+
     }
 
     /*
@@ -134,52 +147,22 @@ public class EditDashboardTC {
           3. Test with a 1001-character dashboard description and verify the error message.
       @Expected result: Correct error messages are displayed for invalid lengths.
     */
-    @Test(groups = {"Invalid"}, priority = 3 ,dependsOnMethods = "TC2_CheckEditDashboardButton")
-    public void TC4_CheckValidRange() {
-        SoftAssert SAsserter = new SoftAssert();
+    @Test(groups = {"Invalid"}, priority = 3 ,dependsOnMethods = "TC2_CheckEditDashboardButton"
+    ,dataProvider = "ValidationMessagesProvider")
+    public void TC4_CheckValidRange(String dashboardName,String dashboardDescrip,String message) {
         boolean LengthChecker;
-        String Randomstr = DataUtil.generateRandomString(2);
 
-        new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(DashboardName)
-                .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
-                .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();
+        List<String> Messages = new ArrayList<String>(3);
 
-        new LandingPage(DriverFactory.getDriver()).clickEditButton(DashboardName);
-        LogsUtils.info("Test Dashboard name with 2 characters");
-        LengthChecker = new EditPage(DriverFactory.getDriver())
-                .enterDashboardName(Randomstr)
-                .clickSubmit().CheckErrorMessage("DashboardName", DashboardNameMessage);
-        SAsserter.assertTrue(LengthChecker);
+        new DashboardPage(DriverFactory.getDriver())
+                .enterDashboardName(dashboardName)
+                .enterDashboardDescription(dashboardDescrip)
+                .clickSubmit();
+        Messages = General.getValidationMessages(DriverFactory.getDriver());
+        LengthChecker = Messages.contains(message);
+        Assert.assertTrue(LengthChecker);;
 
-        try {
-            Randomstr = DataUtil.generateRandomString(51);
-            LogsUtils.info("Test Dashboard name with 51 characters");
-            LengthChecker = new EditPage(DriverFactory.getDriver())
-                    .enterDashboardName(Randomstr)
-                    .clickSubmit().CheckErrorMessage("DashboardName", DashboardNameMessage);
-            SAsserter.assertTrue(LengthChecker);
-        } catch (Exception e) {
-            LogsUtils.info("Get again to Add page");
-            new LandingPage(DriverFactory.getDriver()).clickEditButton(DashboardName);
-            Randomstr = DataUtil.generateRandomString(51);
-            LogsUtils.info("Test Dashboard name with 51 characters");
-            LengthChecker = new EditPage(DriverFactory.getDriver())
-                    .enterDashboardName(Randomstr)
-                    .clickSubmit().CheckErrorMessage("DashboardName", DashboardNameMessage);
-            SAsserter.assertTrue(LengthChecker);
-        }
 
-        Randomstr = DataUtil.generateRandomString(1001);
-        LogsUtils.info("Test Dashboard description with 1001 characters");
-        LengthChecker = new EditPage(DriverFactory.getDriver())
-                .enterDashboardDescription(Randomstr)
-                .clickSubmit().CheckErrorMessage("DashboardDescription", DashboarddescriMessage);
-        SAsserter.assertTrue(LengthChecker);
-
-        SAsserter.assertAll();
-
-        Clean(DashboardName);
     }
 
     /*
@@ -193,23 +176,40 @@ public class EditDashboardTC {
     @Test(groups = {"Valid"}, priority = 4 ,dependsOnMethods = "TC2_CheckEditDashboardButton")
     public void TC5_checkAllowedGroupsCounter() {
         boolean CounterChecker;
-        String RandomDashboardName = DataUtil.generateRandomString(10);
+        RandomDashboardName = DataUtil.generateRandomString(10);
 
-        new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
+
+        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
                 .chooseGroupsEdit(Groups[1]).chooseGroupsView(Groups[2])
                 .chooseGroupsEdit(Groups[3]).chooseGroupsView(Groups[0]);
 
-        new AddPage(DriverFactory.getDriver()).clickSubmit();
+        new DashboardPage(DriverFactory.getDriver()).clickSubmit();
 
         new LandingPage(DriverFactory.getDriver()).clickEditButton(RandomDashboardName);
-        CounterChecker = new EditPage(DriverFactory.getDriver()).CheckAllowedGroups();
+        CounterChecker = new DashboardPage(DriverFactory.getDriver()).CheckAllowedGroups();
         Assert.assertTrue(CounterChecker);
-        Clean(DashboardName);
+
     }
 
-    @AfterMethod(alwaysRun = true)
+    @AfterMethod
+    private void testEnd(){
+        Clean(DashboardName);
+        Clean(RandomDashboardName);
+    }
+
+    @AfterClass(alwaysRun = true)
     private void tearout() {
         DriverFactory.quitDriver();
+    }
+    @DataProvider(name="ValidationMessagesProvider")
+
+    public Object[][] getDataFromDataprovider(){
+        return new Object[][]
+                {
+                        { DataUtil.generateRandomString(2)," ", DashboardNameMessage },
+                        { DataUtil.generateRandomString(51)," ", DashboardNameMessage  },
+                        { " ",DataUtil.generateRandomString(1001), DashboarddescriMessage}
+                };
+
     }
 }

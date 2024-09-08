@@ -1,19 +1,18 @@
 package Tests;
 
 import DriverFactory.DriverFactory;
-import Pages.AddPage;
+import GeneralClasses.General;
+import Pages.DashboardPage;
 import Pages.LandingPage;
 import Pages.LoginPage;
 import Utilities.DataUtil;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.time.Duration;
 
-import static HelperFn.Helper.Clean;
+import static GeneralClasses.General.Clean;
 
 public class Fav_UnFavTC
 {
@@ -22,6 +21,7 @@ public class Fav_UnFavTC
     private final String DashboardDescription = (String)DataUtil.getJsonData("AddDashboardData","dashboard_description");
     private final String[] Groups = (String[]) DataUtil.getJsonData("AddDashboardData","groups");
     private final String[] LandingDate = (String[]) DataUtil.getJsonData("AddDashboardData","landing_date");
+    String RandomDashboradName;
 
 
 
@@ -31,14 +31,21 @@ public class Fav_UnFavTC
 
     public Fav_UnFavTC() throws IOException {
     }
+    @BeforeClass(alwaysRun = true)
+    private void Start() throws IOException {
+        DriverFactory.setupDriver(Browser);
+        DriverFactory.getDriver().manage().window().maximize();
+        DriverFactory.getDriver().get(LoginPage_URL);
+        new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
+                .enterPassword(ValidPassword).clickLogin();
+
+    }
+
 
     @BeforeMethod(alwaysRun = true)
     private void Setup() throws IOException {
-        DriverFactory.setupDriver(Browser);
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-        DriverFactory.getDriver().get(LoginPage_URL);
-        new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
-                .enterPassword(ValidPassword).clickLogin();
+        General.getLandingPage(DriverFactory.getDriver());
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
     }
 
@@ -53,16 +60,16 @@ public class Fav_UnFavTC
     @Test(groups = {"Valid"} , priority =  1)
     public void TC1_FavDashboard(){
 
-        boolean CloneCheck;
-        String RandomDashboradName = DataUtil.generateRandomString(10);
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboradName)
+        boolean FavCheck;
+        RandomDashboradName = DataUtil.generateRandomString(10);
+        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboradName)
                 .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
                 .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();;
 
-        CloneCheck = new LandingPage(DriverFactory.getDriver())
-                .ClickFavoriteButton(RandomDashboradName).CheckFavoriteDashboard(RandomDashboradName);
-        Assert.assertTrue(CloneCheck);
-        Clean(RandomDashboradName);
+        FavCheck = new LandingPage(DriverFactory.getDriver())
+                .clickFavoriteButton(RandomDashboradName).checkFavoriteDashboard(RandomDashboradName);
+        Assert.assertTrue(FavCheck);
+
 
     }
 
@@ -80,23 +87,28 @@ public class Fav_UnFavTC
     @Test(groups = {"Invalid"} , priority =  1)
     public void TC2_UnFavDashboard(){
 
-        boolean CloneCheck;
-        String RandomDashboradName = DataUtil.generateRandomString(10);
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboradName)
+        boolean UnFavCheck;
+        RandomDashboradName = DataUtil.generateRandomString(10);
+        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboradName)
                 .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
                 .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();
 
         new LandingPage(DriverFactory.getDriver())
-                .ClickFavoriteButton(RandomDashboradName);
+                .clickFavoriteButton(RandomDashboradName);
 
-        CloneCheck = new LandingPage(DriverFactory.getDriver())
-                .ClickFavoriteButton(RandomDashboradName).CheckFavoriteDashboard(RandomDashboradName);
+        UnFavCheck = new LandingPage(DriverFactory.getDriver())
+                .clickFavoriteButton(RandomDashboradName).checkFavoriteDashboard(RandomDashboradName);
 
-        Assert.assertFalse(CloneCheck);
-        Clean(RandomDashboradName);
+        Assert.assertFalse(UnFavCheck);
+
     }
 
     @AfterMethod(alwaysRun = true)
+    private void testEnd(){
+        Clean(RandomDashboradName);
+    }
+    
+    @AfterClass(alwaysRun = true)
     private void tearout(){
 
         DriverFactory.quitDriver();

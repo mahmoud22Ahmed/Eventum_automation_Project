@@ -1,12 +1,23 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Main Suite" parallel="methods"  thread-count="16">
+<suite name="Main Suite">
+ 
+    <listeners>
+        <listener class-name="Listeners.ITest"/>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+    </listeners>
+    <test name="test all website on google Chrome">
 
-    <suite-files>
-        <suite-file path="LoginSuite.xml"></suite-file>
-        <suite-file path="LandingSuite.xml"></suite-file>
-        <suite-file path="AddDashboard.xml"></suite-file>
-        <suite-file path="EditDashboard.xml"></suite-file>
-        <suite-file path="Unfav_FavDashboard.xml"></suite-file>
-        <suite-file path="CloneDashboard.xml"></suite-file>
-    </suite-files>
+        <classes>
+            <class name="Tests.LoginTC"/>
+            <class name="Tests.LandingPageTC"/>
+            <class name="Tests.AddDashboardPageTC"/>
+            <class name="Tests.EditDashboardTC"/>
+            <class name="Tests.CloneDashboardTC"/>
+            <class name="Tests.Fav_UnFavTC"/>
+            <class name="Tests.LogoutTC"/>
+
+        </classes>
+    </test>
+
+
 </suite>

@@ -10,71 +10,70 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EditPage {
+public class DashboardPage {
 
     //locetors
     private List<WebElement> Groups = new ArrayList<WebElement>();
     private final By DashboardName = By.xpath("//input[@name = 'name']");
     private final By DashboardDescription = By.xpath("//textarea[contains(@class,'input-text')]");
-    private final By GroupsEdit = By.xpath("(//div[contains(@class,'react-tags__search-input')] /input)[1]");
-    private final By GroupsView = By.xpath("(//div[contains(@class,'react-tags__search-input')] /input)[2]");
+    private final By GroupsEdit = By.xpath("//input [@placeholder = 'Choose groups that can edit']");
+    private final By GroupsView = By.xpath("//input [@placeholder = 'Choose groups that can view only']");
     private final By DatepickerDropdown = By.xpath("//div[@class = 'dashboard-datepicker  ']");
     private final By SubmitButton = By.xpath("//button[text() = 'Submit']");
-    private final By DashboardNameMessageLocetor = By.xpath("//div[contains(@class,'name')] //span[@class = 'warning-span ']");
-    private final By DashboarddescriMessageLocetor = By.xpath("//div[contains(@class,'descri')] //span[@class = 'warning-span ']");
     private final By CustomRangeStart = By.xpath("//input[@name = 'daterangepicker_start']");
     private final By CustomRangeEnd = By.xpath("//input[@name = 'daterangepicker_end']");
     private final By DatepickerApplyButton = By.xpath("//button[text() = 'Apply']");
     private final By DatepickerValue = By.xpath("//span[@class=\"datepicker\"]");
     private final By AllowedGroupsCounter = By.xpath("//label[contains(text(),'Allowed Groups')]");
     private final String DatepickerElement = "//li[@data-range-key = ";
-    private final By GroupRow = By.xpath("//span[@class ='groupName']']");
+    private final By GroupRow = By.xpath("//span[@class ='groupName']");
 
     //driver
     private WebDriver Driver;
-    public EditPage(WebDriver driver) {
+    public DashboardPage(WebDriver driver) {
         this.Driver = driver;
     }
 
-    public EditPage enterDashboardName(String name){
+    public DashboardPage enterDashboardName(String name){
         SelenuimUtil.clearTextField(Driver,DashboardName);
         SelenuimUtil.sendData(Driver,DashboardName,name);
         return  this;
     }
 
-    public EditPage enterDashboardDescription(String name){
+    public DashboardPage enterDashboardDescription(String name){
         SelenuimUtil.clearTextField(Driver,DashboardDescription);
         SelenuimUtil.sendData(Driver,DashboardDescription,name);
         return this;
     }
 
-    public EditPage chooseGroupsEdit(String name){
+    public DashboardPage chooseGroupsEdit(String name){
         SelenuimUtil.clearTextField(Driver,GroupsEdit);
         SelenuimUtil.sendData(Driver,GroupsEdit,name + Keys.ENTER);
         return this;
     }
 
-    public EditPage chooseGroupsView(String name){
+    public DashboardPage chooseGroupsView(String name){
         SelenuimUtil.clearTextField(Driver,GroupsView );
         SelenuimUtil.sendData(Driver,GroupsView,name + Keys.ENTER);
         return this;
     }
 
-    public EditPage chooseLandingDate(String Date){
+    public DashboardPage chooseLandingDate(String Date){
         By Datepicker = By.xpath(DatepickerElement + "\""+Date+"\"]");
         SelenuimUtil.clickingOnElement(Driver,DatepickerDropdown);
         SelenuimUtil.clickingOnElement(Driver,Datepicker);
         return this;
     }
 
-    public EditPage clickSubmit() {
+    public DashboardPage clickSubmit() {
+        SelenuimUtil.clickingOnElement(Driver,LandingPage.DashboardPageTitle);
         SelenuimUtil.scrolling(Driver,SubmitButton);
         SelenuimUtil.clickingOnElement(Driver,SubmitButton);
         return this;
     }
 
 
-    public EditPage SelectCustomRange(String StartDate ,String EndDate){
+    public DashboardPage selectCustomRange(String StartDate , String EndDate){
         SelenuimUtil.clearTextField(Driver,CustomRangeStart);
         SelenuimUtil.sendData(Driver,CustomRangeStart,StartDate + Keys.ENTER);
 
@@ -86,36 +85,10 @@ public class EditPage {
         return this;
     }
 
-    public boolean CheckErrorMessage(String element,String expectedMessage){
-        String Message = "Not Found";
-        switch (element){
-            case "DashboardName":
-                try {
-                    Message = SelenuimUtil.getText(Driver,DashboardNameMessageLocetor);
-                }
-                catch (Exception e){
-                    LogsUtils.info("the error message in Dashboard name isn't appeared");
-                    return false;
-                }
-                break;
-            case "DashboardDescription":
-                try {
-                    Message = SelenuimUtil.getText(Driver, DashboarddescriMessageLocetor);
-                }
-                catch (Exception e){
-                    LogsUtils.info("the error message in Dashboard Description isn't appeared");
-                    return false;
-                }
-                break;
-            default:
-                break;
-        }
 
-        LogsUtils.info("error message: " + Message);
-        return Message.equals(expectedMessage);
-    }
 
-    public boolean CheckCustomRange(String StartDate ,String EndDate){
+
+    public boolean checkCustomRange(String StartDate ,String EndDate){
         String Date, ExpectedDate = StartDate +" - "+EndDate ;
         Date = SelenuimUtil.getText(Driver,DatepickerValue);
         LogsUtils.info(Date);

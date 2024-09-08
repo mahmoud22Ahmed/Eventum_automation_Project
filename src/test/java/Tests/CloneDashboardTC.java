@@ -1,19 +1,22 @@
 package Tests;
 
 import DriverFactory.DriverFactory;
-import Pages.AddPage;
+import GeneralClasses.General;
+import Pages.DashboardPage;
 import Pages.LandingPage;
 import Pages.LoginPage;
 import Utilities.DataUtil;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.time.Duration;
 
-import static HelperFn.Helper.Clean;
+import static GeneralClasses.General.Clean;
 
 public class CloneDashboardTC {
 
@@ -29,17 +32,27 @@ public class CloneDashboardTC {
     private final String LoginPage_URL = DataUtil.getPropertyValue("Environment","LOGIN_URL");
     private final String Browser = DataUtil.getPropertyValue("Environment","BROWSER");
 
+    String RandomDashboardName;
+
 
     public CloneDashboardTC() throws IOException {
     }
+    
+    @BeforeClass(alwaysRun = true)
+    private void Start() throws IOException {
+        DriverFactory.setupDriver(Browser);
+        DriverFactory.getDriver().manage().window().maximize();
+        DriverFactory.getDriver().get(LoginPage_URL);
+        new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
+                .enterPassword(ValidPassword).clickLogin();
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+    }
+
 
     @BeforeMethod(alwaysRun = true)
     private void Setup() throws IOException {
-        DriverFactory.setupDriver(Browser);
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-        DriverFactory.getDriver().get(LoginPage_URL);
-        new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
-                .enterPassword(ValidPassword).clickLogin();
+        General.getLandingPage(DriverFactory.getDriver());
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
     }
 
@@ -53,24 +66,30 @@ public class CloneDashboardTC {
                 1. It must clone succcessfully
                 2. the name of the duplicted dashboard become Copy of ..
    */
+    @Description("TC validate that the user can clone dashboard")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Mahmoud")
+    @Feature("Clone Dashboard")
+    @Story("Clone dashboard")
     @Test(groups = {"Valid"} , priority =  1)
     public void TC1_CloneDashboard(){
 
         boolean CloneCheck;
-        String RandomDashboardName = DataUtil.generateRandomString(4);
-        new AddPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
+        RandomDashboardName = DataUtil.generateRandomString(4);
+        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(RandomDashboardName)
                 .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
                 .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();;
 
-        CloneCheck = new LandingPage(DriverFactory.getDriver()).CloneDashboard(RandomDashboardName)
-                    .CheckCurrentDashboard("Copy of "+RandomDashboardName);
+        CloneCheck = new LandingPage(DriverFactory.getDriver()).cloneDashboard(RandomDashboardName)
+                    .checkCurrentDashboard("Copy of "+RandomDashboardName);
         Assert.assertTrue(CloneCheck);
-        Clean(DashboardName);
-        Clean("Copy of "+RandomDashboardName);
+
     }
 
     @AfterMethod(alwaysRun = true)
     private void tearout(){
+        Clean(DashboardName);
+        Clean("Copy of "+RandomDashboardName);
         DriverFactory.quitDriver();
     }
 }

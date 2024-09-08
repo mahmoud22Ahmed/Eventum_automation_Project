@@ -1,17 +1,18 @@
 package Tests;
 
 import DriverFactory.DriverFactory;
+import GeneralClasses.General;
 import Pages.LoginPage;
 import Utilities.DataUtil;
 import Utilities.LogsUtils;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginTC {
     //element tags
@@ -29,7 +30,6 @@ public class LoginTC {
     private final String Browser = DataUtil.getPropertyValue("Environment","BROWSER");
 
     //error Meesages
-    String popupMessage = (String) DataUtil.getJsonData("LoginErrorMessage","popup");
     String emptyPasswordMessage = (String) DataUtil.getJsonData("LoginErrorMessage","empty_password");
     String emptyUsernameMessage = (String) DataUtil.getJsonData("LoginErrorMessage","empty_username");
 
@@ -43,8 +43,10 @@ public class LoginTC {
     @BeforeMethod(alwaysRun = true)
     private void Setup(){
         DriverFactory.setupDriver(Browser);
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        DriverFactory.getDriver().manage().window().maximize();
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         DriverFactory.getDriver().get(LoginPage_URL);
+
 
     }
 
@@ -60,7 +62,7 @@ public class LoginTC {
     private void TC1_ValidLogin() throws InterruptedException, IOException {
         
         boolean LoginCheck;
-        LoginCheck = new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
+        LoginCheck = new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
                 .enterPassword(ValidPassword).clickLogin().checkLoginSuccess();
         Assert.assertTrue(LoginCheck);
 
@@ -82,16 +84,19 @@ public class LoginTC {
         boolean errorcheck;
 
         //login with invalid username and password
-        LoginCheck = new LoginPage(DriverFactory.getDriver()).EnterUsername(InvalidUsername)
+        LoginCheck = new LoginPage(DriverFactory.getDriver()).enterUsername(InvalidUsername)
                 .enterPassword(InvalidPassword).clickLogin().checkLoginSuccess();
-        errorcheck = new LoginPage(DriverFactory.getDriver()).checkErrorMessage(popup_tag,popupMessage);
+        errorcheck = new LoginPage(DriverFactory.getDriver())
+                .checkInvalidLoginPopup(DriverFactory.getDriver());
         SAsserter.assertFalse(LoginCheck | !errorcheck);
 
         //login with invalid username and valid password
-        LoginCheck = new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
+        LoginCheck = new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
                 .enterPassword(InvalidPassword).clickLogin().checkLoginSuccess();
 
-        errorcheck = new LoginPage(DriverFactory.getDriver()).checkErrorMessage(popup_tag,popupMessage);
+        errorcheck = new LoginPage(DriverFactory.getDriver())
+                .checkInvalidLoginPopup(DriverFactory.getDriver());
+
         SAsserter.assertFalse(LoginCheck | !errorcheck);
 
 
@@ -112,13 +117,15 @@ public class LoginTC {
     private void TC3_EmptyLogin() throws InterruptedException, IOException {
         boolean LoginButtonCheck;
         boolean errorcheck;
+        List<String> Messages = new ArrayList<String>(3);
 
         //login with invalid username and password
-        LoginButtonCheck = new LoginPage(DriverFactory.getDriver()).EnterUsername(" ")
+        LoginButtonCheck = new LoginPage(DriverFactory.getDriver()).enterUsername(" ")
                 .enterPassword(" ").checkLoginButtonIsEnable();
         LogsUtils.info("login button checking:" + LoginButtonCheck);
-        errorcheck = new LoginPage(DriverFactory.getDriver()).checkErrorMessage(password_tag,emptyPasswordMessage) &
-                new LoginPage(DriverFactory.getDriver()).checkErrorMessage(username_tag,emptyUsernameMessage);
+        Messages = General.getValidationMessages(DriverFactory.getDriver());
+        errorcheck = Messages.contains(emptyPasswordMessage)
+                & Messages.contains(emptyUsernameMessage);
         LogsUtils.info("error checking:" + errorcheck);
         Assert.assertTrue(!LoginButtonCheck & errorcheck);
     }
