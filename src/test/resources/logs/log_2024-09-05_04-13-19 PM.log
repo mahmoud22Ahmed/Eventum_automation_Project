@@ -1,0 +1,59 @@
+[DEBUG] 05-09-2024 16:13:20 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\AddDashboard.xml"
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.Start()[pri:0, instance:null] -187318373
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.tearout()[pri:0, instance:null] 1512755889
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.Setup()[pri:0, instance:null] -187489918
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] -12062581
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   REMOVED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM INDEPENDENT OBJECTS
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] -170187657
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   REMOVED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM INDEPENDENT OBJECTS
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC1_AddValidDashboard()[pri:2, instance:Tests.AddDashboardPageTC@23a918c7] 1313777286
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC1_AddValidDashboard()[pri:2, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   REMOVED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM INDEPENDENT OBJECTS
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] 1547514597
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE AddDashboardPageTC.TC2_CheckSubmitEmptyForm()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] 1652267573
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC2_CheckSubmitEmptyForm()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   REMOVED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM INDEPENDENT OBJECTS
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC1_AddValidDashboard()[pri:2, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [ForkJoinPool.commonPool-worker-1] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC2_CheckSubmitEmptyForm()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [ForkJoinPool.commonPool-worker-2] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR AddDashboardPageTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.AddDashboardPageTC@23a918c7] ==> AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]   REMOVED PRED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM NODE AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [ForkJoinPool.commonPool-worker-3] [org.testng.internal.Graph] - [Graph]   REMOVED PRED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM NODE AddDashboardPageTC.TC2_CheckSubmitEmptyForm()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [ForkJoinPool.commonPool-worker-5] [org.testng.internal.Graph] - [Graph]   REMOVED PRED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM NODE AddDashboardPageTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [ForkJoinPool.commonPool-worker-1] [org.testng.internal.Graph] - [Graph]   REMOVED PRED AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7] FROM NODE AddDashboardPageTC.TC1_AddValidDashboard()[pri:2, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]               AddDashboardPageTC.TC_CheckAddDashboardButton()[pri:1, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]               AddDashboardPageTC.TC1_AddValidDashboard()[pri:2, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]               AddDashboardPageTC.TC2_CheckSubmitEmptyForm()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]               AddDashboardPageTC.TC3_CheckSelectCustomRange()[pri:3, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph]               AddDashboardPageTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.AddDashboardPageTC@23a918c7]
+[TRACE] 05-09-2024 16:13:21 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 05-09-2024 16:13:21 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\AddDashboard.xml
+
+[INFO] 05-09-2024 16:13:28 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 16:13:28 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 05-09-2024 16:13:28 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 16:13:29 [main] [Utilities.LogsUtils] - New Dashboard
+[INFO] 05-09-2024 16:13:40 [main] [Utilities.LogsUtils] - 01/09/24 00:00 - 01/01/25 00:00
+[INFO] 05-09-2024 16:13:40 [main] [Utilities.LogsUtils] - 01/09/24 00:00 - 01/01/25 00:00
+[INFO] 05-09-2024 16:13:40 [main] [Utilities.LogsUtils] - it is = true
+[INFO] 05-09-2024 16:13:40 [main] [Utilities.LogsUtils] - Test Dashboard name with 2 characters
+[INFO] 05-09-2024 16:13:43 [main] [Utilities.LogsUtils] - Test Dashboard name with 2 characters
+[INFO] 05-09-2024 16:13:44 [main] [Utilities.LogsUtils] - Test Dashboard name with 2 characters

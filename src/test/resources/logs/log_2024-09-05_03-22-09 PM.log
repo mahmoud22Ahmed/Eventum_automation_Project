@@ -1,0 +1,35 @@
+[DEBUG] 05-09-2024 15:22:09 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.Start()[pri:0, instance:null] 1960687085
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.tearout()[pri:0, instance:null] -635250625
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.Setup()[pri:0, instance:null] 1960520688
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.testEnd()[pri:0, instance:null] -617821308
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@320e400] -257556443
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:22:10 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 05-09-2024 15:22:10 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 05-09-2024 15:22:17 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 15:22:17 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 05-09-2024 15:22:17 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 15:23:18 [main] [Utilities.LogsUtils] - Default
+[INFO] 05-09-2024 15:23:32 [main] [Utilities.LogsUtils] - Mahmoud 0ka
+[INFO] 05-09-2024 15:24:15 [main] [Utilities.LogsUtils] - Edit Dashboard

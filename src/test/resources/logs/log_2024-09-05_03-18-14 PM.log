@@ -1,0 +1,44 @@
+[DEBUG] 05-09-2024 15:18:14 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.Start()[pri:0, instance:null] 1960687085
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.tearout()[pri:0, instance:null] -635250625
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.Setup()[pri:0, instance:null] 1960520688
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.testEnd()[pri:0, instance:null] -617821308
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@285c08c8] 367076589
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:18:15 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 05-09-2024 15:18:15 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 05-09-2024 15:18:21 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 15:18:21 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 05-09-2024 15:18:21 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 15:18:25 [main] [Utilities.LogsUtils] - Favorites
+[INFO] 05-09-2024 15:18:25 [main] [Utilities.LogsUtils] - Default
+[INFO] 05-09-2024 15:18:25 [main] [Utilities.LogsUtils] - not found
+[INFO] 05-09-2024 15:18:25 [main] [Utilities.LogsUtils] - there is no dashboard with this name
+[INFO] 05-09-2024 15:18:31 [main] [Utilities.LogsUtils] - Default
+[INFO] 05-09-2024 15:18:31 [main] [Utilities.LogsUtils] - Mahmoud 0ka
+[INFO] 05-09-2024 15:18:31 [main] [Utilities.LogsUtils] - before deleting2
+[INFO] 05-09-2024 15:18:38 [main] [Utilities.LogsUtils] - there is dashboard in this step
+[INFO] 05-09-2024 15:18:41 [main] [Utilities.LogsUtils] - Favorites
+[INFO] 05-09-2024 15:18:41 [main] [Utilities.LogsUtils] - Default
+[INFO] 05-09-2024 15:18:41 [main] [Utilities.LogsUtils] - not found
+[INFO] 05-09-2024 15:18:41 [main] [Utilities.LogsUtils] - there is no dashboard with this name

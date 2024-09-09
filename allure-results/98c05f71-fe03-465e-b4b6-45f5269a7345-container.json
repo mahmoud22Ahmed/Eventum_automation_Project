@@ -1,0 +1,1 @@
+{"uuid":"98c05f71-fe03-465e-b4b6-45f5269a7345","name":"Tests.AddDashboardPageTC.Setup","children":["f093e19b-3086-44a6-85ff-5d22879cd9ed"],"description":"","befores":[{"name":"Setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1725785212031,"stop":1725785212415}],"afters":[],"start":1725785212030,"stop":1725785212415}

@@ -1,0 +1,31 @@
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.Start()[pri:0, instance:null] 2140675760
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.Setup()[pri:0, instance:null] 2141094061
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.tearout()[pri:0, instance:null] -781749346
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.TC1_CloneDashboard()[pri:1, instance:Tests.CloneDashboardTC@6111ba37] 431450129
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:01:44 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 05-09-2024 15:01:50 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 15:01:50 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 05-09-2024 15:01:50 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 15:01:53 [main] [Utilities.LogsUtils] - Copy of ug2b
+[INFO] 05-09-2024 15:01:59 [main] [Utilities.LogsUtils] - Exception @ :[Ljava.lang.StackTraceElement;@121bb45b
+[INFO] 05-09-2024 15:01:59 [main] [Utilities.LogsUtils] - there is no dashboard with this name
+[INFO] 05-09-2024 15:02:03 [main] [Utilities.LogsUtils] - Default
+[INFO] 05-09-2024 15:02:03 [main] [Utilities.LogsUtils] - Copy of ug2b
+[INFO] 05-09-2024 15:02:03 [main] [Utilities.LogsUtils] - before deleting2
+[INFO] 05-09-2024 15:02:08 [main] [Utilities.LogsUtils] - Exception @ :[Ljava.lang.StackTraceElement;@370c1968
+[INFO] 05-09-2024 15:02:09 [main] [Utilities.LogsUtils] - after deleting0

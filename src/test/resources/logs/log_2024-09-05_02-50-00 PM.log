@@ -1,0 +1,35 @@
+[DEBUG] 05-09-2024 14:50:00 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.Start()[pri:0, instance:null] 2140675760
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.Setup()[pri:0, instance:null] 2141094061
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.tearout()[pri:0, instance:null] -781749346
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE CloneDashboardTC.TC1_CloneDashboard()[pri:1, instance:Tests.CloneDashboardTC@13e3c1c7] -863408223
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 14:50:01 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 05-09-2024 14:50:01 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 05-09-2024 14:50:08 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 14:50:08 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 05-09-2024 14:50:08 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 14:50:12 [main] [Utilities.LogsUtils] - Default
+[INFO] 05-09-2024 14:50:12 [main] [Utilities.LogsUtils] - m9fT
+[INFO] 05-09-2024 14:50:12 [main] [Utilities.LogsUtils] - Copy of m9fT
+[INFO] 05-09-2024 14:50:18 [main] [Utilities.LogsUtils] - Exception @ :[Ljava.lang.StackTraceElement;@c755b2
+[INFO] 05-09-2024 14:50:18 [main] [Utilities.LogsUtils] - there is no dashboard with this name
+[INFO] 05-09-2024 14:50:22 [main] [Utilities.LogsUtils] - Default
+[INFO] 05-09-2024 14:50:22 [main] [Utilities.LogsUtils] - not found
+[INFO] 05-09-2024 14:50:22 [main] [Utilities.LogsUtils] - there is no dashboard with this name

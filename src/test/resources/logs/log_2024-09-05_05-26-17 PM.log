@@ -1,0 +1,35 @@
+[DEBUG] 05-09-2024 17:26:17 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LandingSuite.xml"
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.Start()[pri:0, instance:null] -600480567
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.tearout()[pri:0, instance:null] 1925843299
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.Setup()[pri:0, instance:null] -600573228
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC2_SearchingInDashboardDropdown()[pri:1, instance:Tests.LandingPageTC@5115f590] 1551983463
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC4_checkDeleteDashboard()[pri:1, instance:Tests.LandingPageTC@5115f590] 1275365374
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC3_CheckAddDashboardButton()[pri:1, instance:Tests.LandingPageTC@5115f590] 1328910583
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 17:26:18 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 05-09-2024 17:26:18 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\Desktop\javas\DashBoard_Auto\TestRunner\LandingSuite.xml
+
+[INFO] 05-09-2024 17:26:26 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 17:26:26 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 05-09-2024 17:26:26 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 17:26:38 [main] [Utilities.LogsUtils] - Exception @ :[Ljava.lang.StackTraceElement;@2bdcfcf
+[INFO] 05-09-2024 17:26:38 [main] [Utilities.LogsUtils] - Dashboard found: false
+[INFO] 05-09-2024 17:26:39 [main] [Utilities.LogsUtils] - New Dashboard
+[INFO] 05-09-2024 17:26:39 [main] [Utilities.LogsUtils] - Dashboard page opened: true
+[INFO] 05-09-2024 17:26:51 [main] [Utilities.LogsUtils] - Exception @ :[Ljava.lang.StackTraceElement;@526893f
+[INFO] 05-09-2024 17:26:51 [main] [Utilities.LogsUtils] - there is no dashboard with this name
