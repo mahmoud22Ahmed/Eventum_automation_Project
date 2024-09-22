@@ -1,0 +1,52 @@
+[DEBUG] 08-09-2024 11:30:23 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE Fav_UnFavTC.Start()[pri:0, instance:null] 687890881
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE Fav_UnFavTC.tearout()[pri:0, instance:null] -2013328277
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE Fav_UnFavTC.Setup()[pri:0, instance:null] 688324572
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE Fav_UnFavTC.testEnd()[pri:0, instance:null] -2031018200
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE Fav_UnFavTC.TC2_UnFavDashboard()[pri:1, instance:Tests.Fav_UnFavTC@708f018e] -207485887
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE Fav_UnFavTC.TC1_FavDashboard()[pri:1, instance:Tests.Fav_UnFavTC@708f018e] 839340377
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:30:24 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 08-09-2024 11:30:24 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 08-09-2024 11:30:34 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 08-09-2024 11:30:34 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 08-09-2024 11:30:34 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 08-09-2024 11:30:38 [main] [Utilities.LogsUtils] - loop start
+[INFO] 08-09-2024 11:30:38 [main] [Utilities.LogsUtils] - Favorites
+[INFO] 08-09-2024 11:30:38 [main] [Utilities.LogsUtils] - Fleet dashboard Fleet 3Fleet 3
+[INFO] 08-09-2024 11:30:38 [main] [Utilities.LogsUtils] - 51MOhnq1e#
+[INFO] 08-09-2024 11:30:38 [main] [Utilities.LogsUtils] - E3zvTV8E7c
+[INFO] 08-09-2024 11:30:41 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:30:41 [main] [Utilities.LogsUtils] - E3zvTV8E7c
+[INFO] 08-09-2024 11:30:41 [main] [Utilities.LogsUtils] - before deleting2
+[INFO] 08-09-2024 11:30:52 [main] [Utilities.LogsUtils] - there is dashboard in this step
+[INFO] 08-09-2024 11:31:04 [main] [Utilities.LogsUtils] - there is dashboard in this step
+[INFO] 08-09-2024 11:31:08 [main] [Utilities.LogsUtils] - loop start
+[INFO] 08-09-2024 11:31:08 [main] [Utilities.LogsUtils] - Favorites
+[INFO] 08-09-2024 11:31:08 [main] [Utilities.LogsUtils] - Fleet dashboard Fleet 3Fleet 3
+[INFO] 08-09-2024 11:31:08 [main] [Utilities.LogsUtils] - 51MOhnq1e#
+[INFO] 08-09-2024 11:31:08 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:31:10 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:31:10 [main] [Utilities.LogsUtils] - $332BZ3p5p
+[INFO] 08-09-2024 11:31:11 [main] [Utilities.LogsUtils] - before deleting2
+[INFO] 08-09-2024 11:31:22 [main] [Utilities.LogsUtils] - there is dashboard in this step

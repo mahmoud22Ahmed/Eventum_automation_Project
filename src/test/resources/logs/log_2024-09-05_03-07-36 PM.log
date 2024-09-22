@@ -1,0 +1,32 @@
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.Setup()[pri:0, instance:null] -1741851915
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.tearout()[pri:0, instance:null] 919896390
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC3_EmptyLogin()[pri:1, instance:Tests.LoginTC@75e91545] -452049078
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC1_ValidLogin()[pri:1, instance:Tests.LoginTC@75e91545] 1865761797
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LoginTC.TC2_InvalidLogin()[pri:1, instance:Tests.LoginTC@75e91545] 980095809
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 05-09-2024 15:07:37 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 05-09-2024 15:07:43 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 15:07:44 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 05-09-2024 15:07:44 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 15:07:50 [main] [Utilities.LogsUtils] - Username:MahmodAjmed
+[INFO] 05-09-2024 15:07:50 [main] [Utilities.LogsUtils] - Password:123458
+[INFO] 05-09-2024 15:07:51 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 15:07:55 [main] [Utilities.LogsUtils] - Exception @ :[Ljava.lang.StackTraceElement;@59901c4d
+[INFO] 05-09-2024 15:07:55 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 05-09-2024 15:07:55 [main] [Utilities.LogsUtils] - Password:123458
+[INFO] 05-09-2024 15:07:55 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 05-09-2024 15:07:59 [main] [Utilities.LogsUtils] - Exception @ :[Ljava.lang.StackTraceElement;@22a0d4ea
+[INFO] 05-09-2024 15:08:06 [main] [Utilities.LogsUtils] - Username: 
+[INFO] 05-09-2024 15:08:06 [main] [Utilities.LogsUtils] - Password: 
+[INFO] 05-09-2024 15:08:06 [main] [Utilities.LogsUtils] - login button checking:false
+[INFO] 05-09-2024 15:08:06 [main] [Utilities.LogsUtils] - error checking:true

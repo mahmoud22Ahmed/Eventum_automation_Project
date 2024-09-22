@@ -1,0 +1,44 @@
+[DEBUG] 08-09-2024 11:54:49 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.Start()[pri:0, instance:null] -600480567
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.tearout()[pri:0, instance:null] 1925843299
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.Setup()[pri:0, instance:null] -600573228
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC2_SearchingInDashboardDropdown()[pri:1, instance:Tests.LandingPageTC@4c361f63] 1470205242
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC4_checkDeleteDashboard()[pri:1, instance:Tests.LandingPageTC@4c361f63] 1193587153
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE LandingPageTC.TC3_CheckAddDashboardButton()[pri:1, instance:Tests.LandingPageTC@4c361f63] 1247132362
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:54:50 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 08-09-2024 11:54:50 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 08-09-2024 11:54:57 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 08-09-2024 11:54:58 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 08-09-2024 11:54:58 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 08-09-2024 11:55:00 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:55:00 [main] [Utilities.LogsUtils] - hmX9qReyyQ
+[INFO] 08-09-2024 11:55:00 [main] [Utilities.LogsUtils] - Dashboard found: true
+[INFO] 08-09-2024 11:55:03 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:55:03 [main] [Utilities.LogsUtils] - hmX9qReyyQ
+[INFO] 08-09-2024 11:55:03 [main] [Utilities.LogsUtils] - before deleting2
+[INFO] 08-09-2024 11:55:14 [main] [Utilities.LogsUtils] - there is dashboard in this step
+[INFO] 08-09-2024 11:55:15 [main] [Utilities.LogsUtils] - New Dashboard
+[INFO] 08-09-2024 11:55:15 [main] [Utilities.LogsUtils] - Dashboard page opened: true
+[INFO] 08-09-2024 11:55:17 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:55:17 [main] [Utilities.LogsUtils] - UCL
+[INFO] 08-09-2024 11:55:17 [main] [Utilities.LogsUtils] - before deleting5
+[INFO] 08-09-2024 11:55:18 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:55:18 [main] [Utilities.LogsUtils] - UCL
+[INFO] 08-09-2024 11:55:18 [main] [Utilities.LogsUtils] - after deleting4

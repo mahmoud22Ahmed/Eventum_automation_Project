@@ -1,0 +1,76 @@
+[DEBUG] 08-09-2024 11:37:42 [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml"
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.Start()[pri:0, instance:null] 1960687085
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.tearout()[pri:0, instance:null] -635250625
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.Setup()[pri:0, instance:null] 1960520688
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.testEnd()[pri:0, instance:null] -617821308
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.TC1_EditValidDashboard()[pri:2, instance:Tests.EditDashboardTC@15efda6c] -1376035686
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC1_EditValidDashboard()[pri:2, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   REMOVED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM INDEPENDENT OBJECTS
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.TC3_CheckEditEmptyForm()[pri:2, instance:Tests.EditDashboardTC@15efda6c] -1253313481
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC3_CheckEditEmptyForm()[pri:2, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   REMOVED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM INDEPENDENT OBJECTS
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.EditDashboardTC@15efda6c] 1763228170
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   REMOVED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM INDEPENDENT OBJECTS
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.TC5_checkAllowedGroupsCounter()[pri:4, instance:Tests.EditDashboardTC@15efda6c] -78486646
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC5_checkAllowedGroupsCounter()[pri:4, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   REMOVED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM INDEPENDENT OBJECTS
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ADDING NODE EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] 57996945
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ================ SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC1_EditValidDashboard()[pri:2, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [ForkJoinPool.commonPool-worker-1] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC5_checkAllowedGroupsCounter()[pri:4, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [ForkJoinPool.commonPool-worker-2] [org.testng.internal.Graph] - [Graph]   ADDING PREDECESSOR FOR EditDashboardTC.TC3_CheckEditEmptyForm()[pri:2, instance:Tests.EditDashboardTC@15efda6c] ==> EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [ForkJoinPool.commonPool-worker-1] [org.testng.internal.Graph] - [Graph]   REMOVED PRED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM NODE EditDashboardTC.TC5_checkAllowedGroupsCounter()[pri:4, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [ForkJoinPool.commonPool-worker-4] [org.testng.internal.Graph] - [Graph]   REMOVED PRED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM NODE EditDashboardTC.TC1_EditValidDashboard()[pri:2, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]   REMOVED PRED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM NODE EditDashboardTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [ForkJoinPool.commonPool-worker-2] [org.testng.internal.Graph] - [Graph]   REMOVED PRED EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c] FROM NODE EditDashboardTC.TC3_CheckEditEmptyForm()[pri:2, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] =============== DONE SORTING
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== SORTED NODES
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]               EditDashboardTC.TC2_CheckEditDashboardButton()[pri:1, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]               EditDashboardTC.TC1_EditValidDashboard()[pri:2, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]               EditDashboardTC.TC3_CheckEditEmptyForm()[pri:2, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]               EditDashboardTC.TC4_CheckValidRange(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph]               EditDashboardTC.TC5_checkAllowedGroupsCounter()[pri:4, instance:Tests.EditDashboardTC@15efda6c]
+[TRACE] 08-09-2024 11:37:43 [main] [org.testng.internal.Graph] - [Graph] ====== END SORTED NODES
+[INFO] 08-09-2024 11:37:43 [main] [org.testng.internal.Utils] - [TestNG] Running:
+  C:\Users\Mahmoud\AppData\Local\JetBrains\IdeaIC2024.1\temp-testng-customsuite.xml
+
+[INFO] 08-09-2024 11:37:49 [main] [Utilities.LogsUtils] - Username:MahmoudAhmed
+[INFO] 08-09-2024 11:37:49 [main] [Utilities.LogsUtils] - Password:12345678
+[INFO] 08-09-2024 11:37:49 [main] [Utilities.LogsUtils] - button is clicked
+[INFO] 08-09-2024 11:37:53 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:37:53 [main] [Utilities.LogsUtils] - *e7AB
+[INFO] 08-09-2024 11:37:54 [main] [Utilities.LogsUtils] - Edit Dashboard
+[INFO] 08-09-2024 11:37:56 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:37:56 [main] [Utilities.LogsUtils] - Mahmoud 0kaP5DtM7MCLY
+[INFO] 08-09-2024 11:37:56 [main] [Utilities.LogsUtils] - not found
+[INFO] 08-09-2024 11:37:56 [main] [Utilities.LogsUtils] - there is no dashboard with this name
+[INFO] 08-09-2024 11:37:59 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:37:59 [main] [Utilities.LogsUtils] - *e7AB
+[INFO] 08-09-2024 11:37:59 [main] [Utilities.LogsUtils] - before deleting2
+[INFO] 08-09-2024 11:38:10 [main] [Utilities.LogsUtils] - there is dashboard in this step
+[INFO] 08-09-2024 11:38:13 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:38:13 [main] [Utilities.LogsUtils] - 3HcbnzB4!V
+[INFO] 08-09-2024 11:38:15 [main] [Utilities.LogsUtils] - *8BTV6nj9!
+[INFO] 08-09-2024 11:38:17 [main] [Utilities.LogsUtils] - Default
+[INFO] 08-09-2024 11:38:17 [main] [Utilities.LogsUtils] - Mahmoud 0kaP5DtM7MCLY
+[INFO] 08-09-2024 11:38:17 [main] [Utilities.LogsUtils] - not found
+[INFO] 08-09-2024 11:38:17 [main] [Utilities.LogsUtils] - there is no dashboard with this name
+[INFO] 08-09-2024 11:38:20 [main] [Utilities.LogsUtils] - Default

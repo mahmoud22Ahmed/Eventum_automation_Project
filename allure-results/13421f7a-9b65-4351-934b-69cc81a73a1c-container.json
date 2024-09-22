@@ -1,0 +1,1 @@
+{"uuid":"13421f7a-9b65-4351-934b-69cc81a73a1c","name":"Tests.LoginTC.tearout","children":["2367f1d0-ed15-465a-93af-62fd89a8a1d0"],"description":"","befores":[],"afters":[{"name":"tearout","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1725785144882,"stop":1725785145082}],"start":1725785144882,"stop":1725785145082}
