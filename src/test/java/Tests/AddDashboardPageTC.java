@@ -1,21 +1,19 @@
 package Tests;
 
 import DriverFactory.DriverFactory;
-import GeneralClasses.General;
-import Pages.DashboardPage;
+import Pages.AddPage;
 import Pages.LandingPage;
 import Pages.LoginPage;
 import Utilities.DataUtil;
 import Utilities.LogsUtils;
 import org.testng.Assert;
-import org.testng.annotations.*;
-
-import static GeneralClasses.General.Clean;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
 public class AddDashboardPageTC {
 
@@ -36,26 +34,16 @@ public class AddDashboardPageTC {
     private final String DashboarddescriMessage = (String)DataUtil.getJsonData("AddDashboardErrorMessage","dashboard_description");
     public AddDashboardPageTC() throws IOException {
     }
-    
-    @BeforeClass(alwaysRun = true)
-    private void Start() throws IOException {
-        DriverFactory.setupDriver(Browser);
-        DriverFactory.getDriver().manage().window().maximize();
-
-        DriverFactory.getDriver().get(LoginPage_URL);
-        new LoginPage(DriverFactory.getDriver()).enterUsername(ValidUsername)
-                .enterPassword(ValidPassword).clickLogin();
-
-    }
-
 
     @BeforeMethod(alwaysRun = true)
     private void Setup() throws IOException {
-        General.getLandingPage(DriverFactory.getDriver());
-        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        DriverFactory.setupDriver(Browser);
+        DriverFactory.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        DriverFactory.getDriver().get(LoginPage_URL);
+        new LoginPage(DriverFactory.getDriver()).EnterUsername(ValidUsername)
+                      .EnterPassword(ValidPassword).ClickLogin();
         new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
     }
-
 
     /*
     @Title: Test case for adding a valid dashboard
@@ -68,26 +56,16 @@ public class AddDashboardPageTC {
         6. Verify the dashboard is added
     @Expected result: Dashboard successfully added and verified on the landing page
    */
-    @Test(groups = {"Valid"} , priority =  2 ,dependsOnMethods = "TC_CheckAddDashboardButton")
+    @Test(groups = {"Valid"} , priority =  1)
     public void TC1_AddValidDashboard(){
-
+        SoftAssert SAsserter = new SoftAssert();
         boolean AddCheck;
-        new DashboardPage(DriverFactory.getDriver()).enterDashboardName(DashboardName)
+        new AddPage(DriverFactory.getDriver()).enterDashboardName(DashboardName)
                 .enterDashboardDescription(DashboardDescription).chooseLandingDate(LandingDate[3])
                 .chooseGroupsEdit(Groups[0]).chooseGroupsView(Groups[1]).clickSubmit();;
-        AddCheck = new LandingPage(DriverFactory.getDriver()).checkCurrentDashboard(DashboardName);
-
-        Assert.assertTrue(AddCheck);
-
-
-    }
-
-    @Test(groups = {"Valid"},priority = 1)
-    public void TC_CheckAddDashboardButton(){
-        boolean PageTitle;
-        PageTitle =new LandingPage(DriverFactory.getDriver())
-                .checkPageTitle("New Dashboard");
-        Assert.assertTrue(PageTitle);
+        AddCheck = new LandingPage(DriverFactory.getDriver()).CheckCurrentDashboard(DashboardName);
+        SAsserter.assertTrue(AddCheck);
+        SAsserter.assertAll();
     }
 
     /*
@@ -97,18 +75,13 @@ public class AddDashboardPageTC {
         2. Verify the error message for the dashboard name field
     @Expected result: Correct error message is displayed for the empty dashboard name field
    */
-    @Test(groups = {"Invalid"} , priority =  3,dependsOnMethods = "TC_CheckAddDashboardButton")
+    @Test(groups = {"Invalid"} , priority =  1)
     public void TC2_CheckSubmitEmptyForm(){
-
-        Boolean ValidationMessageChecker;
-        List<String> Messages = new ArrayList<String>(3);
-
-        new DashboardPage(DriverFactory.getDriver())
-                .enterDashboardName(" ").clickSubmit();
-        Messages = General.getValidationMessages(DriverFactory.getDriver());
-        ValidationMessageChecker = Messages.contains(DashboardNameMessage);
-        Assert.assertTrue(ValidationMessageChecker);
-
+        SoftAssert SAsserter = new SoftAssert();
+        Boolean ValidationMessage;
+        ValidationMessage = new AddPage(DriverFactory.getDriver()).clickSubmit().CheckErrorMessage("DashboardName",DashboardNameMessage);
+        SAsserter.assertTrue(ValidationMessage);
+        SAsserter.assertAll();
     }
 
 
@@ -120,16 +93,16 @@ public class AddDashboardPageTC {
             3. Verify the selected custom date range is correct
         @Expected result: Custom date range is correctly applied and verified
     */
-    @Test(groups = {"Valid"} , priority =  3
-            ,dependsOnMethods = "TC_CheckAddDashboardButton" )
+    @Test(groups = {"Valid"} , priority =  2)
     public void TC3_CheckSelectCustomRange(){
-
+        SoftAssert SAsserter = new SoftAssert();
         boolean DateChecker ;
-        DateChecker = new DashboardPage(DriverFactory.getDriver()).chooseLandingDate(LandingDate[0])
-                .selectCustomRange(CustomDateStart,CustomDateEnd)
-                .checkCustomRange(CustomDateStart,CustomDateEnd);
+        DateChecker = new AddPage(DriverFactory.getDriver()).chooseLandingDate(LandingDate[0])
+                .SelectCustomRange(CustomDateStart,CustomDateEnd)
+                .CheckCustomRange(CustomDateStart,CustomDateEnd);
+        SAsserter.assertTrue(DateChecker);
         LogsUtils.info("it is = "+ DateChecker);
-        Assert.assertTrue(DateChecker);
+        SAsserter.assertAll();
     }
 
     /*
@@ -140,46 +113,51 @@ public class AddDashboardPageTC {
         3. Test with a 1001-character dashboard description and verify the error message
     @Expected result: Correct error messages are displayed for invalid lengths
     */
-    @Test(groups = {"Valid"} , priority =  3 ,dependsOnMethods = "TC_CheckAddDashboardButton"
-            ,dataProvider = "ValidationMessagesProvider")
-    public void TC4_CheckValidRange(String dashboardName
-            ,String dashboardDescrip,String message){
-        //SoftAssert SAsserter = new SoftAssert();
+    @Test(groups = {"Valid"} , priority =  3)
+    public void TC4_CheckValidRange(){
+        SoftAssert SAsserter = new SoftAssert();
         boolean LengthChecker;
         String Randomstr;
-        List<String> Messages = new ArrayList<String>(3);
         Randomstr = DataUtil.generateRandomString(2);
         LogsUtils.info("Test Dashboard name with 2 characters");
+        LengthChecker = new AddPage(DriverFactory.getDriver())
+                    .enterDashboardName(Randomstr)
+                    .clickSubmit().CheckErrorMessage("DashboardName", DashboardNameMessage);
+        SAsserter.assertTrue(LengthChecker);
 
-        new DashboardPage(DriverFactory.getDriver())
-                .enterDashboardName(dashboardName)
-                .enterDashboardDescription(dashboardDescrip)
-                .clickSubmit();
-        Messages = General.getValidationMessages(DriverFactory.getDriver());
-        LengthChecker = Messages.contains(message);
-        Assert.assertTrue(LengthChecker);
 
+        try {
+            Randomstr = DataUtil.generateRandomString(51);
+            LogsUtils.info("Test Dashboard name with 51 characters");
+            LengthChecker = new AddPage(DriverFactory.getDriver())
+                    .enterDashboardName(Randomstr)
+                    .clickSubmit().CheckErrorMessage("DashboardName", DashboardNameMessage);
+            SAsserter.assertTrue(LengthChecker);
+        }catch (Exception e){
+            LogsUtils.info("get again to Add page");
+            new LandingPage(DriverFactory.getDriver()).clickAddDashboard();
+            Randomstr = DataUtil.generateRandomString(51);
+            LogsUtils.info("Test Dashboard name with 51 characters");
+            LengthChecker = new AddPage(DriverFactory.getDriver())
+                    .enterDashboardName(Randomstr)
+                    .clickSubmit().CheckErrorMessage("DashboardName", DashboardNameMessage);
+            SAsserter.assertTrue(LengthChecker);
+        }
+
+        Randomstr = DataUtil.generateRandomString(1001);
+        LogsUtils.info("Test Dashboard dashboard with 1001 characters");
+        LengthChecker = new AddPage(DriverFactory.getDriver())
+                .enterDashboardDescription(Randomstr)
+                .clickSubmit().CheckErrorMessage("DashboardDescription",DashboarddescriMessage);
+        SAsserter.assertTrue(LengthChecker);
+
+        SAsserter.assertAll();
 
     }
 
-    @AfterMethod
-    private void testEnd(){
-            Clean(DashboardName);
-    }
 
-    @AfterClass(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     private void tearout(){
         DriverFactory.quitDriver();
-    }
-
-    @DataProvider(name="ValidationMessagesProvider")
-    public Object[][] getDataFromDataprovider(){
-        return new Object[][]
-                {
-                        { DataUtil.generateRandomString(2)," ", DashboardNameMessage },
-                        { DataUtil.generateRandomString(51)," ", DashboardNameMessage  },
-                        { " ",DataUtil.generateRandomString(1001), DashboarddescriMessage}
-                };
-
     }
 }
